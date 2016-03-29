@@ -1,0 +1,23 @@
+{
+  "name": "Top 100",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sfchronicle/top100",
+  "authors": [
+    "Lucio Villa <lucio310@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "foundation-sites": "~6.2.0"
+  },
+  "resolutions": {
+    "jquery": "~2.2.0"
+  }
+}

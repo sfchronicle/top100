@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="http://www.sfchronicle.com/favicon.ico?v=2">
+    {% block head %}{% endblock %}
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    
+
+  </head>
+  <body class="{% if config.DEBUG %}debug{% endif %}">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <main>
+
+    <header>
+        <div>
+            <div class="top100-logo">
+              <img src="{{ url_for('static', filename='images/logo.png') }}" />
+            </div>
+        </div>
+
+        <div class="title">
+            <a class="logo" href="http://www.sfchronicle.com">
+                <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
+            </a>
+            <h1>TOP 100 RESTAURANTS</h1>
+            <div class="share-div">
+                <label class="share-button"><span>Share</span></label>
+            </div>
+        </div>
+
+        <nav class="sections">
+        <ul>
+          <li class="top100-nav" id="top100"> <a href="{{ url_for('index') }}#top100">Top 100</a>
+          <li class="pipes"> <a>Cuisines</a>
+          <li class="pipes"> <a ui-sref="regions" ui-sref-active="active">Regions</a>
+          <li class="pipes"> <a ui-sref="guides" ui-sref-active="active">Guides</a>
+          <li class="pipes"> <a ui-sref="search" ui-sref-active="active"><i class="fa fa-search"></i> Search the list</a>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="callout large secondary">
+        <div class="row">
+            <div class="large-4 columns">
+                <h5>TOP 100 RESTAURANTS</h5>
+                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit.</p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    {% block javascript %}{% endblock %}
+
+    {% if config.DEBUG %}
+    <script>document.write('<script src="http://'
+        + location.host.split(':')[0]
+        + ':35729/livereload.js"></'
+        + 'script>')</script>
+    {% endif %}
+
+    
+
+</main>
+
+</body>
+</html>
