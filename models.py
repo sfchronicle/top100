@@ -10,6 +10,7 @@ class Restaurant(db.Model):
     Region = db.Column(db.Text())
     Website = db.Column(db.Text())
     slug = db.Column(db.Text())
+    Cuisine = db.Column(db.Text())
 
 
   

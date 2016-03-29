@@ -37,15 +37,7 @@
             </div>
         </div>
 
-        <nav class="sections">
-        <ul>
-          <li class="top100-nav" id="top100"> <a href="{{ url_for('index') }}#top100">Top 100</a>
-          <li class="pipes"> <a>Cuisines</a>
-          <li class="pipes"> <a ui-sref="regions" ui-sref-active="active">Regions</a>
-          <li class="pipes"> <a ui-sref="guides" ui-sref-active="active">Guides</a>
-          <li class="pipes"> <a ui-sref="search" ui-sref-active="active"><i class="fa fa-search"></i> Search the list</a>
-        </ul>
-      </nav>
+        {%include 'components/nav.html' %}
     </header>
 
     {% block content %}{% endblock %}

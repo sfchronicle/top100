@@ -8,6 +8,19 @@ def index():
 	restaurants = Restaurant.query.all()
 	return render_template('index.html', title='index', restaurants=restaurants)
 
+@app.route('/cuisines/')
+def cuisines_view():
+	return render_template('cuisines.html', title='index')
+
+@app.route('/regions/')
+def regions_view():
+	return render_template('regions.html', title='index')
+
+@app.route('/search/')
+def search_view():
+	restaurants = Restaurant.query.all()
+	return render_template('search.html', title='index', restaurants=restaurants)
+
 @app.route('/<slug>/')
 def restaurant_view(slug):
 	restaurant = Restaurant.query.filter_by(slug=slug)[0]
