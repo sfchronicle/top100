@@ -8,13 +8,29 @@
 
 {% block content %}
 
-	<div>
-		<div>
-		
-		
-		</div>
+<div class="cuisines">
+	<div class="cuisines-block">
+		<div class="american">American</div>
+		<div class="belgian">Belgian</div>
+		<div class="british">British</div>
+		<div class="chinese">Chinese</div>
+		<div class="drink-centric">Drink-centric</div>
+		<div class="french">French</div>
+		<div class="greek">Greek</div>
+		<div class="hawaiian">Hawaiian</div>
+		<div class="indian">Indian</div>
+		<div class="italian">Italian</div>
+		<div class="japanese">Japanese</div>
+		<div class="mexican">Mexican</div>
+		<div class="moroccan">Moroccan</div>
+		<div class="northerncalifornia">Northern California</div>
+		<div class="seafood">Seafood</div>
+		<div class="spanish">Spanish</div>
+		<div class="scandinavian">Scandinavian</div>
+		<div class="thai">Thai</div>
+		<div class="vietnamese">Vietnamese</div>
 	</div>
-
+</div>
 
 {% endblock %}
 
@@ -23,5 +39,65 @@
   $(document).ready(function() {
     App.init();
   });
+
+	$(".american").click(function() {
+		console.log("Chose American.");
+	});
+	$(".belgian").click(function() {
+		console.log("Chose Belgian.");
+	});
+	$(".british").click(function() {
+		console.log("Chose British.");
+	});
+	$(".chinese").click(function() {
+		console.log("Chose chinese.");
+	});
+	$(".drink-centric").click(function() {
+		console.log("Chose drink-centric.");
+	});
+	$(".french").click(function() {
+		console.log("Chose French.");
+	});
+	$(".greek").click(function() {
+		console.log("Chose Greek.");
+	});
+	$(".hawaiian").click(function() {
+		console.log("Chose Hawaiian.");
+	});
+	$(".indian").click(function() {
+		console.log("Chose Indian.");
+	});
+	$(".italian").click(function() {
+		console.log("Chose Italian.");
+	});
+	$(".japanese").click(function() {
+		console.log("Chose Japanese.");
+	});
+	$(".mexican").click(function() {
+		console.log("Chose Mexican.");
+	});
+	$(".moroccan").click(function() {
+		console.log("Chose Moroccan.");
+	});
+	$(".northerncalifornia").click(function() {
+		console.log("Chose Northern California.");
+	});
+	$(".seafood").click(function() {
+		console.log("Chose Seafood.");
+	});
+	$(".spanish").click(function() {
+		console.log("Chose Spanish.");
+	});
+	$(".scandinavian").click(function() {
+		console.log("Chose Scandinavian.");
+	});
+	$(".thai").click(function() {
+		console.log("Chose Thai.");
+	});
+	$(".vietnamese").click(function() {
+		console.log("Chose Vietnamese.");
+	});
+
+
 </script>
 {% endblock %}

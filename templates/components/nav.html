@@ -1,9 +1,9 @@
 <nav class="sections">
     <ul>
 		<li class="top100-nav" id="top100"> <a href="{{ url_for('index') }}#top100">Top 100</a>
-		<li class="pipes"> <a>Cuisines</a>
-		<li class="pipes"> <a>Regions</a>
-		<li class="pipes"> <a>Guides</a>
-		<li class="pipes"> <a><i class="fa fa-search"></i> Search the list</a>
+		<li class="pipes"> <a href="{{ url_for('cuisines_view') }}">Cuisines</a>
+		<li class="pipes"> <a href="{{ url_for('regions_view') }}">Regions</a>
+		<li class="pipes"> <a href="{{ url_for('guides_view') }}">Guides</a>
+		<li class="pipes"> <a href="{{ url_for('search_view') }}"><i class="fa fa-search"></i> Search the list</a>
     </ul>
 </nav>

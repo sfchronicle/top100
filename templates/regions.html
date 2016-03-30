@@ -8,11 +8,12 @@
 
 {% block content %}
 
-	<div>
-		<div>
-		
-			
-		
+	<div class="regions">
+		<div class="regions-block">
+		  <div class="sf">San Francisco</div>
+		  <div class="northbay">North Bay</div>
+		  <div class="eastbay">East Bay</div>
+			<div class="southbay">South Bay</div>
 		</div>
 	</div>
 
@@ -21,8 +22,23 @@
 
 {% block javascript %}
 <script>
+
   $(document).ready(function() {
     App.init();
   });
+
+	$(".sf").click(function() {
+		console.log("Chose region SF.");
+	});
+	$(".northbay").click(function() {
+		console.log("Chose region North Bay.");
+	});
+	$(".eastbay").click(function() {
+		console.log("Chose region East Bay.");
+	});
+	$(".southbay").click(function() {
+		console.log("Chose region South Bay.");
+	});
+
 </script>
 {% endblock %}

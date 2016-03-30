@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Regions | SF Chronicle{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="regions">
+		<div class="regions-block">
+		  <div class="oneofakind">One of a Kind</div>
+		  <div class="greatpizza">Great Pizza</div>
+			<div class="topburgers">Top Burgers</div>
+			<div class="openlate">Open Late</div>
+			<div class="exceptionalbars">Exceptional Bars</div>
+			<div class="bestofbrunch">Best of Brunch</div>
+			<div class="outdoor">Outdoor</div>
+			<div class="saturdaylunch">Saturday Lunch</div>
+			<div class="top100classics">Top 100 Classics</div>
+			<div class="historic">Historic</div>
+			<div class="views">Views</div>
+			<div class="new">New</div>
+			<div class="privaterooms">Private Rooms</div>
+			<div class="tastingmenus">Tasting Menus</div>
+			<div class="fourstars">Four Stars</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+  $(document).ready(function() {
+    App.init();
+  });
+
+	$(".oneofakind").click(function() {
+		console.log("Chose one of a kind.");
+	});
+	$(".greatpizza").click(function() {
+		console.log("Chose greatpizza.");
+	});
+	$(".topburgers").click(function() {
+		console.log("Chose topburgers.");
+	});
+	$(".openlate").click(function() {
+		console.log("Chose openlate.");
+	});
+	$(".exceptionalbars").click(function() {
+		console.log("Chose exceptionalbars.");
+	});
+	$(".bestofbrunch").click(function() {
+		console.log("Chose bestofbrunch.");
+	});
+	$(".outdoor").click(function() {
+		console.log("Chose outdoor.");
+	});
+	$(".saturdaylunch").click(function() {
+		console.log("Chose saturdaylunch.");
+	});
+	$(".top100classics").click(function() {
+		console.log("Chose top100classics.");
+	});
+	$(".historic").click(function() {
+		console.log("Chose historic.");
+	});
+	$(".views").click(function() {
+		console.log("Chose views.");
+	});
+	$(".new").click(function() {
+		console.log("Chose new.");
+	});
+	$(".privaterooms").click(function() {
+		console.log("Chose privaterooms.");
+	});
+	$(".tastingmenus").click(function() {
+		console.log("Chose tastingmenus.");
+	});
+	$(".fourstars").click(function() {
+		console.log("Chose fourstars.");
+	});
+
+</script>
+{% endblock %}

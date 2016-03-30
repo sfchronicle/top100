@@ -16,6 +16,10 @@ def cuisines_view():
 def regions_view():
 	return render_template('regions.html', title='index')
 
+@app.route('/guides/')
+def guides_view():
+	return render_template('guides.html', title='index')
+
 @app.route('/search/')
 def search_view():
 	restaurants = Restaurant.query.all()
@@ -34,6 +38,6 @@ def restaurant_view(slug):
 	)
 
 @freezer.register_generator
-def restaurant_view():	
+def restaurant_view():
 	for restaurant in Restaurant.query.all():
 		yield { 'slug': restaurant.slug }
