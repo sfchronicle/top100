@@ -27,14 +27,42 @@
 			<div class="fourstars">Four Stars</div>
 		</div>
 	</div>
+
+
 	<div id="top100" class="row small-up-2 large-up-4 restaurants">
 		{% for r in restaurants %}
-		<div class="column restaurant {{ r.Cuisine }}">
-			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
-			<h5>{{ r.Name }}</h5>
-		</div>
+			{% for g in guides %}
+
+			{% if (g.Name == r.Name) %}
+
+				<div class="column restaurant
+					OneofaKind{{ g.OneofaKind }}
+					GreatPizza{{ g.GreatPizza }}
+					TopBurgers{{ g.TopBurgers }}
+					OpenLate{{ g.OpenLate }}
+					ExceoptionalBars{{ g.ExceptionalBars }}
+					BestofBrunch{{ g.BestofBrunch }}
+					Outdoor{{ g.Outdoor }}
+					SaturdayLunch{{ g.SaturdayLunch }}
+					Top100Classics{{ g.Top100Classics }}
+					Historic{{ g.Historic }}
+					Views{{ g.Views }}
+					New{{ g.New }}
+					PrivateRooms{{ g.PrivateRooms }}
+					TastingMenus{{ g.TastingMenus }}
+					FourStars{{ g.FourStars }}
+					{{r.slug}}">
+					<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+					<h5>{{ r.Name }}</h5>
+				</div>
+
+			{% endif %}
+
+			{% endfor %}
 		{% endfor %}
+
 	</div>
+
 
 {% endblock %}
 
@@ -47,63 +75,63 @@
 
 	$(".oneofakind").click(function() {
 		console.log("Chose one of a kind.");
-		$(".One").addClass("active");
+		$(".OneofaKindx").addClass("active");
 	});
 	$(".greatpizza").click(function() {
 		console.log("Chose greatpizza.");
-		$(".Great").addClass("active");
+		$(".GreatPizzax").addClass("active");
 	});
 	$(".topburgers").click(function() {
 		console.log("Chose topburgers.");
-		$(".Top").addClass("active");
+		$(".TopBurgersx").addClass("active");
 	});
 	$(".openlate").click(function() {
 		console.log("Chose openlate.");
-		$(".Open").addClass("active");
+		$(".OpenLatex").addClass("active");
 	});
 	$(".exceptionalbars").click(function() {
 		console.log("Chose exceptionalbars.");
-		$(".Exceptional").addClass("active");
+		$(".ExceptionalBarsx").addClass("active");
 	});
 	$(".bestofbrunch").click(function() {
 		console.log("Chose bestofbrunch.");
-		$(".Best").addClass("active");
+		$(".BestofBrunchx").addClass("active");
 	});
 	$(".outdoor").click(function() {
 		console.log("Chose outdoor.");
-		$(".Outdoor").addClass("active");
+		$(".Outdoorx").addClass("active");
 	});
 	$(".saturdaylunch").click(function() {
 		console.log("Chose saturdaylunch.");
-		$(".Saturday").addClass("active");
+		$(".SaturdayLunchx").addClass("active");
 	});
 	$(".top100classics").click(function() {
 		console.log("Chose top100classics.");
-		$(".Top").addClass("active");
+		$(".Top100Classicsx").addClass("active");
 	});
 	$(".historic").click(function() {
 		console.log("Chose historic.");
-		$(".Historic").addClass("active");
+		$(".Historicx").addClass("active");
 	});
 	$(".views").click(function() {
 		console.log("Chose views.");
-		$(".Views").addClass("active");
+		$(".Viewsx").addClass("active");
 	});
 	$(".new").click(function() {
 		console.log("Chose new.");
-		$(".New").addClass("active");
+		$(".Newx").addClass("active");
 	});
 	$(".privaterooms").click(function() {
 		console.log("Chose privaterooms.");
-		$(".Private").addClass("active");
+		$(".PrivateRoomsx").addClass("active");
 	});
 	$(".tastingmenus").click(function() {
 		console.log("Chose tastingmenus.");
-		$(".Tasting").addClass("active");
+		$(".TastingMenusx").addClass("active");
 	});
 	$(".fourstars").click(function() {
 		console.log("Chose fourstars.");
-		$(".Four").addClass("active");
+		$(".FourStarsx").addClass("active");
 	});
 
 </script>
