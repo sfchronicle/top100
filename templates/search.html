@@ -15,7 +15,7 @@
 
 <div id="top100" class="row small-up-2 large-up-4 restaurants">
 	{% for r in restaurants %}
-	<div class="column restaurant {{r.Cuisine}} {{r.Region}} {{r.slug}}">
+	<div class="column restaurant {{r.Cuisine}} {{r.Region}} {{r.slug}} active">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
 		<h5>{{ r.Name }}</h5>
 	</div>
@@ -32,23 +32,28 @@
   });
 
 	$("input").change(function() {
-		var filter = $(this).val();
-		console.log(filter);
+		var filter = $(this).val().toLowerCase();
+		var class_match = 0;
 
 		$(".restaurant").filter(function() {
-			// console.log(this);
 			var classes = this.className.split(" ");
-			// console.log(classes);
 			for (var i=0; i< classes.length; i++) {
-				// console.log(classes[i]);
-				if (classes[i].match(filter)) {
-					console.log("add active class now to");
-					console.log(classes[i]);
-					$(this).addClass("active");
-				} else {
-					$(this).removeClass("active");
+
+				var current_class = classes[i].toLowerCase();
+
+				if (classes[i] != "column" && classes[i] != "restaurant") {
+					if ( current_class.match(filter)) {
+						class_match = class_match + 1;
+					}
 				}
 			}
+			if (class_match > 0) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+			class_match = 0;
+
 		});
 
 	});

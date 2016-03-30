@@ -1,3 +1,11 @@
+
+.restaurant {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
 header {
 
   background-color:#faf9f4;
@@ -8,7 +16,7 @@ header {
   	max-width: 120px;
   	margin-left: 2%;
   	width: 100%;
-    
+
 	    @include media(max-width $medium-breakpoint) {
 	      max-width: 90px;
 	      margin: 0 auto;
