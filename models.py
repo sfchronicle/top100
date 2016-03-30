@@ -12,10 +12,28 @@ class Restaurant(db.Model):
     slug = db.Column(db.Text())
     Cuisine = db.Column(db.Text())
 
-
+    guides = db.relationship('Guide', backref=db.backref('restaurant', lazy='joined'), lazy='dynamic')
   
     def __unicode__(self):
-        return self.Name
+        return self.name
 
     def __repr__(self):
         return '<Restaurant: {}>'.format(self.Name)
+
+class Guide(db.Model):
+    Name = db.Column(db.Text(), db.ForeignKey('restaurant.Name'), primary_key=True)
+    OneofaKind = db.Column(db.Text())
+    GreatPizza = db.Column(db.Text())
+    TopBurgers = db.Column(db.Text())
+    OpenLate = db.Column(db.Text())
+    ExceptionalBars = db.Column(db.Text())
+    BestofBrunch = db.Column(db.Text())
+    Outdoor = db.Column(db.Text())
+    SaturdayLunch = db.Column(db.Text())
+    Top100Classics = db.Column(db.Text())
+    Historic = db.Column(db.Text())
+    Views = db.Column(db.Text())
+    New = db.Column(db.Text())
+    PrivateRooms = db.Column(db.Text())
+    TastingMenus = db.Column(db.Text())
+    FourStars = db.Column(db.Text())

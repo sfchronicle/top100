@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for
 
 from app import app, db, freezer
-from models import Restaurant
+from models import Restaurant, Guide
 
 @app.route('/')
 def index():
@@ -21,7 +21,8 @@ def regions_view():
 @app.route('/guides/')
 def guides_view():
 	restaurants = Restaurant.query.all()
-	return render_template('guides.html', title='index', restaurants=restaurants)
+	guides = Guide.query.all()
+	return render_template('guides.html', title='index', restaurants=restaurants, guides=guides)
 
 @app.route('/search/')
 def search_view():
