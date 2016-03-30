@@ -28,6 +28,15 @@
 		</div>
 	</div>
 
+	<div id="top100" class="row small-up-2 large-up-4 restaurants">
+		{% for r in restaurants %}
+		<div class="column restaurant {{ r.Cuisine }}">
+			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+			<h5>{{ r.Name }}</h5>
+		</div>
+		{% endfor %}
+	</div>
+
 {% endblock %}
 
 {% block javascript %}
@@ -39,48 +48,63 @@
 
 	$(".oneofakind").click(function() {
 		console.log("Chose one of a kind.");
+		$(".One").addClass("active");
 	});
 	$(".greatpizza").click(function() {
 		console.log("Chose greatpizza.");
+		$(".Great").addClass("active");
 	});
 	$(".topburgers").click(function() {
 		console.log("Chose topburgers.");
+		$(".Top").addClass("active");
 	});
 	$(".openlate").click(function() {
 		console.log("Chose openlate.");
+		$(".Open").addClass("active");
 	});
 	$(".exceptionalbars").click(function() {
 		console.log("Chose exceptionalbars.");
+		$(".Exceptional").addClass("active");
 	});
 	$(".bestofbrunch").click(function() {
 		console.log("Chose bestofbrunch.");
+		$(".Best").addClass("active");
 	});
 	$(".outdoor").click(function() {
 		console.log("Chose outdoor.");
+		$(".Outdoor").addClass("active");
 	});
 	$(".saturdaylunch").click(function() {
 		console.log("Chose saturdaylunch.");
+		$(".Saturday").addClass("active");
 	});
 	$(".top100classics").click(function() {
 		console.log("Chose top100classics.");
+		$(".Top").addClass("active");
 	});
 	$(".historic").click(function() {
 		console.log("Chose historic.");
+		$(".Historic").addClass("active");
 	});
 	$(".views").click(function() {
 		console.log("Chose views.");
+		$(".Views").addClass("active");
 	});
 	$(".new").click(function() {
 		console.log("Chose new.");
+		$(".New").addClass("active");
 	});
 	$(".privaterooms").click(function() {
 		console.log("Chose privaterooms.");
+		$(".Private").addClass("active");
 	});
 	$(".tastingmenus").click(function() {
 		console.log("Chose tastingmenus.");
+		$(".Tasting").addClass("active");
 	});
 	$(".fourstars").click(function() {
 		console.log("Chose fourstars.");
+		$(".Four").addClass("active");
 	});
 
 </script>

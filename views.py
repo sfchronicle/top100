@@ -20,7 +20,8 @@ def regions_view():
 
 @app.route('/guides/')
 def guides_view():
-	return render_template('guides.html', title='index')
+	restaurants = Restaurant.query.all()
+	return render_template('guides.html', title='index', restaurants=restaurants)
 
 @app.route('/search/')
 def search_view():

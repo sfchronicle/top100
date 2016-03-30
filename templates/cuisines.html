@@ -32,6 +32,15 @@
 	</div>
 </div>
 
+<div id="top100" class="row small-up-2 large-up-4 restaurants">
+	{% for r in restaurants %}
+	<div class="column restaurant {{ r.Cuisine }}">
+		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+		<h5>{{ r.Name }}</h5>
+	</div>
+	{% endfor %}
+</div>
+
 {% endblock %}
 
 {% block javascript %}
@@ -42,60 +51,79 @@
 
 	$(".american").click(function() {
 		console.log("Chose American.");
+		$(".American").addClass("active");
 	});
 	$(".belgian").click(function() {
 		console.log("Chose Belgian.");
+		$(".Belgian").addClass("active");
 	});
 	$(".british").click(function() {
 		console.log("Chose British.");
+		$(".British").addClass("active");
 	});
 	$(".chinese").click(function() {
 		console.log("Chose chinese.");
+		$(".Chinese").addClass("active");
 	});
 	$(".drink-centric").click(function() {
 		console.log("Chose drink-centric.");
+		$(".Drink-centric").addClass("active");
 	});
 	$(".french").click(function() {
 		console.log("Chose French.");
+		$(".French").addClass("active");
 	});
 	$(".greek").click(function() {
 		console.log("Chose Greek.");
+		$(".Greek").addClass("active");
 	});
 	$(".hawaiian").click(function() {
 		console.log("Chose Hawaiian.");
+		$(".Hawaiian").addClass("active");
 	});
 	$(".indian").click(function() {
 		console.log("Chose Indian.");
+		$(".Indian").addClass("active");
 	});
 	$(".italian").click(function() {
 		console.log("Chose Italian.");
+		$(".Italian").addClass("active");
 	});
 	$(".japanese").click(function() {
 		console.log("Chose Japanese.");
+		$(".Japanese").addClass("active");
 	});
 	$(".mexican").click(function() {
 		console.log("Chose Mexican.");
+		$(".Mexican").addClass("active");
 	});
 	$(".moroccan").click(function() {
 		console.log("Chose Moroccan.");
+		$(".Moroccan").addClass("active");
 	});
 	$(".northerncalifornia").click(function() {
 		console.log("Chose Northern California.");
+		$(".Northern").addClass("active");
 	});
 	$(".seafood").click(function() {
 		console.log("Chose Seafood.");
+		$(".Seafood").addClass("active");
 	});
 	$(".spanish").click(function() {
 		console.log("Chose Spanish.");
+		$(".Spanish").addClass("active");
 	});
 	$(".scandinavian").click(function() {
 		console.log("Chose Scandinavian.");
+		$(".Scandinavian").addClass("active");
 	});
 	$(".thai").click(function() {
 		console.log("Chose Thai.");
+		$(".Thai").addClass("active");
 	});
 	$(".vietnamese").click(function() {
 		console.log("Chose Vietnamese.");
+		$(".Vietnamese").addClass("active");
 	});
 
 

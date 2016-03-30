@@ -17,6 +17,15 @@
 		</div>
 	</div>
 
+	<div id="top100" class="row small-up-2 large-up-4 restaurants">
+		{% for r in restaurants %}
+		<div class="column restaurant {{ r.Region }}">
+			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+			<h5>{{ r.Name }}</h5>
+		</div>
+		{% endfor %}
+	</div>
+
 
 {% endblock %}
 
@@ -29,15 +38,19 @@
 
 	$(".sf").click(function() {
 		console.log("Chose region SF.");
+		$(".San").addClass("active");
 	});
 	$(".northbay").click(function() {
 		console.log("Chose region North Bay.");
+		$(".North").addClass("active");
 	});
 	$(".eastbay").click(function() {
 		console.log("Chose region East Bay.");
+		$(".East").addClass("active");
 	});
 	$(".southbay").click(function() {
 		console.log("Chose region South Bay.");
+		$(".South").addClass("active");
 	});
 
 </script>
