@@ -8,13 +8,19 @@
 
 {% block content %}
 
-	<div>
-		<div>
-		
-	
-		
-		</div>
+<div class="search-container">
+  <span class="search">Search by restaurant name or cuisine:</span>
+  <input class="input" type="text">
+</div>
+
+<div id="top100" class="row small-up-2 large-up-4 restaurants">
+	{% for r in restaurants %}
+	<div class="column restaurant {{r.Cuisine}} {{r.Region}} {{r.slug}}">
+		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+		<h5>{{ r.Name }}</h5>
 	</div>
+	{% endfor %}
+</div>
 
 
 {% endblock %}
@@ -24,5 +30,26 @@
   $(document).ready(function() {
     App.init();
   });
+
+	$("input").change(function() {
+		var filter = $(this).val();
+		console.log(filter);
+
+		$(".restaurant").filter(function() {
+			// console.log(this);
+			var classes = this.className.split(" ");
+			// console.log(classes);
+			for (var i=0; i< classes.length; i++) {
+				// console.log(classes[i]);
+				if (classes[i].match(filter)) {
+					console.log("add active class now to");
+					console.log(classes[i]);
+					$(this).addClass("active");
+				}
+			}
+		});
+
+	});
+
 </script>
 {% endblock %}
