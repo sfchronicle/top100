@@ -10,11 +10,13 @@ def index():
 
 @app.route('/cuisines/')
 def cuisines_view():
-	return render_template('cuisines.html', title='index')
+	restaurants = Restaurant.query.all()
+	return render_template('cuisines.html', title='index', restaurants=restaurants)
 
 @app.route('/regions/')
 def regions_view():
-	return render_template('regions.html', title='index')
+	restaurants = Restaurant.query.all()
+	return render_template('regions.html', title='index', restaurants=restaurants)
 
 @app.route('/guides/')
 def guides_view():
