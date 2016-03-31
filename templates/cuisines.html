@@ -10,25 +10,25 @@
 
 <div class="cuisines">
 	<div class="cuisines-block">
-		<div class="american">American</div>
-		<div class="belgian">Belgian</div>
-		<div class="british">British</div>
-		<div class="chinese">Chinese</div>
-		<div class="drink-centric">Drink-centric</div>
-		<div class="french">French</div>
-		<div class="greek">Greek</div>
-		<div class="hawaiian">Hawaiian</div>
-		<div class="indian">Indian</div>
-		<div class="italian">Italian</div>
-		<div class="japanese">Japanese</div>
-		<div class="mexican">Mexican</div>
-		<div class="moroccan">Moroccan</div>
-		<div class="northerncalifornia">Northern California</div>
-		<div class="seafood">Seafood</div>
-		<div class="spanish">Spanish</div>
-		<div class="scandinavian">Scandinavian</div>
-		<div class="thai">Thai</div>
-		<div class="vietnamese">Vietnamese</div>
+		<div class="american cuisine">American</div>
+		<div class="belgian cuisine">Belgian</div>
+		<div class="british cuisine">British</div>
+		<div class="chinese cuisine">Chinese</div>
+		<div class="drink-centric cuisine">Drink-centric</div>
+		<div class="french cuisine">French</div>
+		<div class="greek cuisine">Greek</div>
+		<div class="hawaiian cuisine">Hawaiian</div>
+		<div class="indian cuisine">Indian</div>
+		<div class="italian cuisine">Italian</div>
+		<div class="japanese cuisine">Japanese</div>
+		<div class="mexican cuisine">Mexican</div>
+		<div class="moroccan cuisine">Moroccan</div>
+		<div class="northerncalifornia cuisine">Northern California</div>
+		<div class="seafood cuisine">Seafood</div>
+		<div class="spanish cuisine">Spanish</div>
+		<div class="scandinavian cuisine">Scandinavian</div>
+		<div class="thai cuisine">Thai</div>
+		<div class="vietnamese cuisine">Vietnamese</div>
 	</div>
 </div>
 
@@ -48,6 +48,28 @@
   $(document).ready(function() {
     App.init();
   });
+
+	$(".cuisine").click(function() {
+		$(".American").removeClass("active");
+		$(".Belgian").removeClass("active");
+		$(".British").removeClass("active");
+		$(".Chinese").removeClass("active");
+		$(".Drink-centric").removeClass("active");
+		$(".French").removeClass("active");
+		$(".Greek").removeClass("active");
+		$(".Hawaiian").removeClass("active");
+		$(".Indian").removeClass("active");
+		$(".Italian").removeClass("active");
+		$(".Japanese").removeClass("active");
+		$(".Mexican").removeClass("active");
+		$(".Moroccan").removeClass("active");
+		$(".Northern").removeClass("active");
+		$(".Seafood").removeClass("active");
+		$(".Spanish").removeClass("active");
+		$(".Scandinavian").removeClass("active");
+		$(".Thai").removeClass("active");
+		$(".Vietnamese").removeClass("active");
+	});
 
 	$(".american").click(function() {
 		console.log("Chose American.");

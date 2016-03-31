@@ -1,4 +1,11 @@
 
+.san-subregion, .north-subregion, .east-subregion, .south-subregion {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
 .restaurant {
   display: none;
   &.active {
