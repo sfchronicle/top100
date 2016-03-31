@@ -20,7 +20,6 @@
   }
 
   .content {
-    margin-top: -4%;
     display: inline-block;
 
       @include media (max-width 900px) {
@@ -31,6 +30,11 @@
   h1 {
     margin:0;
     text-align:center;
+    font-family: $serif;
+  }
+
+  p {
+    font-family: $serif;
   }
 }
 

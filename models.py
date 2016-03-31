@@ -11,6 +11,11 @@ class Restaurant(db.Model):
     Website = db.Column(db.Text())
     slug = db.Column(db.Text())
     Cuisine = db.Column(db.Text())
+    Phone = db.Column(db.Text())
+    Noise = db.Column(db.Text())
+    photo1 = db.Column(db.Text())
+    photo2 = db.Column(db.Text())
+    Specialties = db.Column(db.Text())
 
     guides = db.relationship('Guide', backref=db.backref('restaurant', lazy='joined'), lazy='dynamic')
   

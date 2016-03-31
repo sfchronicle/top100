@@ -40,12 +40,6 @@ header {
 	}
 }
 
-ul:after { /* 5 */
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-
 li {
   display: inline-block; /* 6 */
 }
@@ -103,7 +97,7 @@ li {
     }
   }
 .restaurants {
-    padding: 2em 0 5em;
+    padding: 3em 0 5em;
 }
 
 .restaurant, .restaurant-index {
@@ -134,4 +128,32 @@ li {
   display: inline-block;
   padding: 2em 0 0;
  
+}
+
+.button {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: $sans-serif;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+    background-color: #EBEBEB;
+    color: #333;
+    transition: background-color 300ms ease-out;
+
+    &:hover {
+      background-color: #fff;
+      color: #333;
+    }
+    &:active {
+      background-color: #fff;
+      color: #333;
+    }
 }
