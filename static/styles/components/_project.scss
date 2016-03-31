@@ -10,23 +10,25 @@
   display: none;
   &.active {
     display: block;
+    clear: none !important;
   }
 }
 
 header {
 
   background-color:#faf9f4;
-  display: inline-block;
   width: 100%;
+  position:relative;
 
 	.top100-logo {
   	max-width: 120px;
   	margin-left: 2%;
   	width: 100%;
+    position: absolute;
 
 	    @include media(max-width $medium-breakpoint) {
 	      max-width: 90px;
-	      margin: 0 auto;
+
 	    }
   	}
 
@@ -59,6 +61,16 @@ li {
 
 .title {
 
+    bottom: 50px;
+    position: absolute;
+    max-width: 520px;
+    background: rgba(250, 249, 244, 0.88);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: 10px 0 0;
+
   h1 {
   	font-family:$sans-serif-light;
     text-align: center;
@@ -69,31 +81,57 @@ li {
     @include media(max-width $medium-breakpoint) {
       font-size:1.9em;
     }
-  }
 
-  .logo {
+    @include media(max-width $small-breakpoint) {
+      font-size:1.5em;
+    }
+  }
+}
+
+.logo {
     text-align: center;
     display: block;
-
-    @include media(max-width $medium-breakpoint) {
-      margin-top: 20px;
-    }
 
     img {
       box-sizing: content-box;
       height: 30px;
+      margin-top:1em;
 
       @include media(max-width $small-breakpoint) {
-        height: 20px;
+        height: 15px;
       }
     }
   }
-}
-
 .restaurants {
-    padding-bottom: 5em;
+    padding: 2em 0 5em;
 }
 
-.restaurant {
+.restaurant, .restaurant-index {
 	margin-bottom: 2em;
+}
+
+#top-image {
+  
+  background-image: url('../images/restaurant_wide.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include media (max-width 990px) {
+    background-image: url("../images/restaurant.jpg");
+    background-position: center bottom;
+  }
+
+  @include media (max-width $small-breakpoint) {
+    min-height: 210px;
+    background-image: url("../images/restaurant_wide.jpg");
+  }
+  
+}
+#intro-text {
+  display: inline-block;
+  padding: 2em 0 0;
+ 
 }

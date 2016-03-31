@@ -8,28 +8,22 @@
 
 {% block content %}
 
-	<div class="row large-up-2 text-left">
-		<div class="column">
+	
+	<div id="intro-text">
+		<div class="large-6 large-offset-3 column">
 			<p>The Bay Area loves to eat. Our lust — and respect — for food are centuries old.</p>
 
 			<p>Maybe it’s a legacy of the Gold Rush, when “free lunch” was offered at the brothels that dotted just about every street corner of San Francisco. Because of this link, there’s always been a strong connection between food and carnal pleasure. Dining is more than sustenance — it’s pure, unadulterated joy.</p>
-
-
-			<p>San Francisco has been a gold mine of originality for more than 160 years: the creation of Boudin sourdough bread in 1849; the first air-dried salami in 1896 from Molinari; the establishment of Ghirardelli chocolate in 1852 and Guittard in 1868. All these built a foundation of innovation that is clearly evident in the food scene today.</p>
-		</div>
-		<div class="column">
-			<p>I’ve been producing the Top 100 Bay Area Restaurants guide for 20 years, but with each edition I marvel anew at the quality of what we have. Chefs continue to start trends that then sweep the country — small plates, open kitchens, communal tables and organic produce.</p>
-			<p>
-			We have such a powerful restaurant scene that the list could swell to 150 or 200 and still exclude many excellent places. That’s what makes the task of creating this guide so wonderful, yet so challenging.</p>
-			<cite>Michael Bauer, Food Critic</cite>
+			<p>I’ve been producing the Top 100 Bay Area Restaurants guide for 20 years, but with each edition I marvel anew at the quality of what we have.
+			</p>
+			<cite>Michael Bauer, Food Critic</cite>	
+			<hr>	
 		</div>
 		
-		<hr>
-
 	</div>
-	<div id="top100" class="row small-up-2 large-up-4 restaurants">
+	<div id="top100" class="row small-up-2 large-up-4 restaurants intro">
 		{% for r in restaurants %}
-		<div class="column restaurant">
+		<div class="column restaurant-index">
 			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
 			<h5>{{ r.Name }}</h5>
 		</div>

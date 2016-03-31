@@ -2,12 +2,3 @@
 	border: none;
 }
 
-
-.small-up-2 > .column:nth-of-type(2n+1), .small-up-2 > .columns:nth-of-type(2n+1) {
-    clear: none;
-}
-@media screen and (min-width: 64em) {
-.large-up-4 > .column:nth-of-type(4n+1), .large-up-4 > .columns:nth-of-type(4n+1) {
-    clear: none;
-}
-}
