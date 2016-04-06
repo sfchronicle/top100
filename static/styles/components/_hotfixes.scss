@@ -1,4 +1,22 @@
 .thumbnail {
 	border: none;
 }
+.thumbnail:hover, .thumbnail:focus {
+    box-shadow: none;
+}
 
+
+.active {
+	background:#fff;
+}
+
+.subregions-block .active {
+	background: #AFAFAF;
+}
+
+.regions-block li:hover {
+	background: #AFAFAF;
+}
+.button-regions:hover {
+	background: #fff;
+}

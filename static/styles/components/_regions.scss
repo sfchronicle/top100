@@ -2,3 +2,60 @@
 	background: #EBEBEB;
 	text-align: center;
 }
+
+.regions-block .button {
+
+  @include media (max-width 780px){
+    padding: 8px;
+  }
+}
+.subregions-block .button-regions {
+
+  @include media (max-width 780px){
+    padding: 8px;
+  }
+}
+.subregions {
+	background: #AFAFAF;
+	text-align: center;
+
+	&:active {
+		background:#AFAFAF;
+	}
+}
+
+.button-regions {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: $sans-serif;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+    background-color: #AFAFAF;
+    color: #333;
+    transition: background-color 300ms ease-out;
+
+    &:hover {
+      background: #AFAFAF;
+      color: #333;
+    }
+    &:active {
+      background: #fff;
+      color: #333;
+    }
+}
+
+.region-active {
+	background: #AFAFAF;
+}
+
+.subregion-active {
+	background: #fff !important;
+}

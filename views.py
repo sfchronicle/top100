@@ -3,10 +3,6 @@ from flask import render_template, redirect, url_for
 from app import app, db, freezer
 from models import Restaurant, Guide
 
-restaurants = Restaurant.query.all()
-guides = Guide.query.all()
-print(guides);
-
 @app.route('/')
 def index():
 	restaurants = Restaurant.query.all()

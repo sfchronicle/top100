@@ -1,5 +1,16 @@
 .search-container {
-	max-width: 300px;
+	background: #EBEBEB;
     width: 100%;
-    margin: 2em auto 0;
+    margin: 0 auto;
+    padding: 2em 1em;
+
+    span {
+	    display: block;
+	    text-align: center;
+    }
+
+    input {
+	    max-width: 300px;
+	    margin: 0 auto;
+    }
 }

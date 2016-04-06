@@ -45,7 +45,7 @@
   font-family: $sans-serif;
   font-size:0.8em;
 
-    @include media (max-width $small-breakpoint) {
+    @include media (max-width $medium-breakpoint) {
       float: none;
       width: 100%;
     }
@@ -63,7 +63,7 @@
     padding:0 0.5em 0 1em;
     text-align: left;
 
-    @include media (max-width $small-breakpoint) {
+    @include media (max-width $medium-breakpoint) {
       float: none;
       width: 100%;
       padding: 0;
@@ -102,7 +102,7 @@
 
 #map {
   
-  @include media (max-width $small-breakpoint) {
+  @include media (max-width $medium-breakpoint) {
     float: left;
     margin:0 2em 2em 0;
   }

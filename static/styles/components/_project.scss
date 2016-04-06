@@ -2,7 +2,7 @@
 .san-subregion, .north-subregion, .east-subregion, .south-subregion {
   display: none;
   &.active {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -93,6 +93,7 @@ li {
 
       @include media(max-width $small-breakpoint) {
         height: 15px;
+        margin-top: 0;
       }
     }
   }
@@ -127,7 +128,14 @@ li {
 #intro-text {
   display: inline-block;
   padding: 2em 0 0;
- 
+
+  p {
+  
+    
+    @include media (max-width $small-breakpoint) {
+    font-size:0.9em;
+    }
+  }
 }
 
 .button {

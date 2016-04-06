@@ -87,7 +87,6 @@ module.exports = function (grunt) {
       options: {
         sourceMap: true,
         includePaths: require('node-refills').includePaths.concat('static/bower_components')
-        
       },
       dist: {
         files: [{

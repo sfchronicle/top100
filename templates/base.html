@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     
 
   </head>
@@ -34,9 +35,7 @@
                     <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
                 </a>
                 <h1>TOP 100 RESTAURANTS</h1>
-                <div class="share-div">
-                    <label class="share-button"><span>Share</span></label>
-                </div>
+                {% block social %}{% endblock %}
             </div>
         </div>
 
@@ -54,11 +53,24 @@
 
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    
+    {% assets filters="uglifyjs", output="scripts/vendor.%(version)s.js",
+              "bower_components/jquery/dist/jquery.min.js",
+              "bower_components/foundation-sites/js/foundation.core.js",
+              "bower_components/foundation-sites/js/foundation.reveal.js",
+              "bower_components/foundation-sites/js/foundation.accordion.js",
+              "bower_components/foundation-sites/js/foundation.util.keyboard.js",
+              "bower_components/foundation-sites/js/foundation.util.box.js",
+              "bower_components/foundation-sites/js/foundation.util.triggers.js",
+              "bower_components/foundation-sites/js/foundation.util.mediaQuery.js",
+              "bower_components/foundation-sites/js/foundation.util.motion.js" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+
     {% block javascript %}{% endblock %}
 
     {% if config.DEBUG %}

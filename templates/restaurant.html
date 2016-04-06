@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% set active_page = active_page|default('index') -%}
 
 {% block title %}{{restaurant.Name}} | SF Chronicle{% endblock %}
 
@@ -26,20 +27,43 @@
 		<div id="infobox">
 
     		<div id="map">
-       			<a href="https://www.google.com/maps/place/{{restaurant.GoogleAddress}}"><img src="https://maps.googleapis.com/maps/api/staticmap?size=265x240&maptype=roadmap\&markers=size:mid%7Ccolor:red%7C{{restaurant.GoogleAddress}}&zoom=15&key=AIzaSyAbXyrIZ7FcFFqiAEdopB2-tZ8ce1ezh_s" />
-				</a>
+    			<iframe
+				  width="270"
+				  height="250"
+				  frameborder="0" style="border:0"
+				  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCUHnEWTjMUWg6pGXGUqz6-yNwZhnmL80w&q={{restaurant.GoogleAddress}}&attribution_source=Google+Maps+Embed+API" allowfullscreen>
+				</iframe>
 			</div>
 
 		    <p><i class="fa fa-link"> </i> <a href="{{restaurant.Website}}">{{restaurant.Website}}</a></p>
 		    <p><i class="fa fa-phone"></i> {{restaurant.Phone}}</p>
-		    <p><i class="fa fa-bell"></i>{{restaurant.Noise}}</p>
+		    {% if restaurant.Noise == 'ONE BELL' %}
+                <p>Noise Level: <i class="fa fa-bell"></i></p>
+            {% elif restaurant.Noise == 'TWO BELLS' %}
+                <p>Noise Level: <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i></p>
+            {% elif restaurant.Noise == 'THREE BELLS' %}
+                <p>Noise Level: <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i></p>
+            {% elif restaurant.Noise == 'FOUR BELLS' %}
+                <p>Noise Level: <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i>
+            	   <i class="fa fa-bell"></i></p>	   
+            {% elif restaurant.Noise == 'BOMB' %}
+                <p>Noise Level: <i class="fa fa-bomb"></i></p>
+            {% endif %}
+		    
+		    {% if restaurant.Fullreviewlink %}
+			    <p><a href="{{restaurant.Fullreviewlink}}">Full Review</a></p>
+		    {% endif %}
   		
   		</div>
 
 	  	<div id="article">
 	    
-		    <p>Shelley Lindgren and her crew exposed the cuisine of southern Italy to Northern California when they opened this restaurant 11 years ago in the Marina. Two years ago they added an outpost in Oakland. The restaurants have different — but equally adept — menus, orchestrated by Rocky Maselli, who creates dishes such as pasta with goat sugo, broccoli rabe and crisp bread crumbs; or spaghetti with sea urchin, lemon and chervil.</p> 
-		    <p>The restaurants also feature nine Neapolitan pizzas, and the desserts are worth the calories. Lindgren has compiled an amazing Italian wine list; many labels may be unfamiliar, but there’s always someone on the floor to lead diners to exciting discoveries. The Rockridge location features exceptional cocktails masterminded by Lindgren’s husband, Greg Lindgren, who owns Rye and 15 Romolo.</p>
+		    <p>{{restaurant.article}}</p>
 		    <p class="specialties"><span>Specialties: </span>{{restaurant.Specialties}}</p>
 	  	</div>
 

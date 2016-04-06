@@ -2,3 +2,29 @@
 	background: #EBEBEB;
 	text-align: center;
 }
+
+.cuisines-block .button {
+
+	@include media (max-width 780px){
+		padding: 8px;
+	}
+}
+
+#cuisines-landing {
+	text-align: center;
+
+	h1 {
+		text-align: center;
+		font-family: serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	div {
+		max-width: 750px; margin: 0 auto;
+	}
+}
+
+.remove-cuisine {
+	display: none;
+}

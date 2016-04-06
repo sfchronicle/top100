@@ -12,7 +12,7 @@ PROJECT_NAME = '2016/top100-restaurants'
 
 if __name__ == '__main__':
     app.config['DEBUG'] = False
-    app.config['ASSETS_DEBUG'] = False
+    app.config['ASSETS_DEBUG'] = True
 
     args = sys.argv[1:]
     

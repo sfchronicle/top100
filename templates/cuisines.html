@@ -10,8 +10,8 @@
 
 <div class="cuisines">
 	<ul class="cuisines-block">
-		<li class="american cuisine button">American</li>
-		<li class="belgian cuisine button">Belgian</li>
+		<li id="american" class="american cuisine button">American</li>
+		<li id="belgian" class="belgian cuisine button">Belgian</li>
 		<li class="british cuisine button">British</li>
 		<li class="chinese cuisine button">Chinese</li>
 		<li class="drink-centric cuisine button">Drink-centric</li>
@@ -32,9 +32,19 @@
 	</ul>
 </div>
 
-<div id="top100" class="row small-up-2 large-up-4 restaurants">
+
+<div id="top100" class="row restaurants small-up-2 medium-up-3 large-up-4">
+ 
+<!-- 	<div id="cuisines-landing">
+		<h1>Cuisines</h1>
+		<p>The favorite weekend meal, reimagined by great chefs. Browse restaurants by cuisines above.</p>
+		<div>
+			<img src="http://ww4.hdnux.com/photos/36/00/01/7864411/3/1600x1600.jpg">
+		</div>
+	</div> -->
+
 	{% for r in restaurants %}
-	<div class="column restaurant {{ r.Cuisine }}">
+	<div class="columns restaurant {{ r.Cuisine }} {{ r.Cuisine|lower }}">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
 		<h5>{{ r.Name }}</h5>
 	</div>
@@ -69,85 +79,132 @@
 		$(".Scandinavian").removeClass("active");
 		$(".Thai").removeClass("active");
 		$(".Vietnamese").removeClass("active");
+		// $("#cuisines-landing").addClass("remove-cuisine");
 	});
 
 	$(".american").click(function() {
 		console.log("Chose American.");
 		$(".American").addClass("active");
+		window.location.hash = 'american';
 	});
 	$(".belgian").click(function() {
 		console.log("Chose Belgian.");
 		$(".Belgian").addClass("active");
+		window.location.hash = 'belgian';
 	});
 	$(".british").click(function() {
 		console.log("Chose British.");
 		$(".British").addClass("active");
+		window.location.hash = 'british';
 	});
 	$(".chinese").click(function() {
 		console.log("Chose chinese.");
 		$(".Chinese").addClass("active");
+		window.location.hash = 'chinese';
 	});
 	$(".drink-centric").click(function() {
 		console.log("Chose drink-centric.");
 		$(".Drink-centric").addClass("active");
+		window.location.hash = 'drink-centric';
 	});
 	$(".french").click(function() {
 		console.log("Chose French.");
 		$(".French").addClass("active");
+		window.location.hash = 'french';
 	});
 	$(".greek").click(function() {
 		console.log("Chose Greek.");
 		$(".Greek").addClass("active");
+		window.location.hash = 'greek';
 	});
 	$(".hawaiian").click(function() {
 		console.log("Chose Hawaiian.");
 		$(".Hawaiian").addClass("active");
+		window.location.hash = 'hawaiian';
 	});
 	$(".indian").click(function() {
 		console.log("Chose Indian.");
 		$(".Indian").addClass("active");
+		window.location.hash = 'indian';
 	});
 	$(".italian").click(function() {
 		console.log("Chose Italian.");
 		$(".Italian").addClass("active");
+		window.location.hash = 'italian';
 	});
 	$(".japanese").click(function() {
 		console.log("Chose Japanese.");
 		$(".Japanese").addClass("active");
+		window.location.hash = 'japanese';
 	});
 	$(".mexican").click(function() {
 		console.log("Chose Mexican.");
 		$(".Mexican").addClass("active");
+		window.location.hash = 'mexican';
 	});
 	$(".moroccan").click(function() {
 		console.log("Chose Moroccan.");
 		$(".Moroccan").addClass("active");
+		window.location.hash = 'moroccan';
 	});
 	$(".northerncalifornia").click(function() {
 		console.log("Chose Northern California.");
 		$(".Northern").addClass("active");
+		window.location.hash = 'northern';
 	});
 	$(".seafood").click(function() {
 		console.log("Chose Seafood.");
 		$(".Seafood").addClass("active");
+		window.location.hash = 'seafood';
 	});
 	$(".spanish").click(function() {
 		console.log("Chose Spanish.");
 		$(".Spanish").addClass("active");
+		window.location.hash = 'spanish';
 	});
 	$(".scandinavian").click(function() {
 		console.log("Chose Scandinavian.");
 		$(".Scandinavian").addClass("active");
+		window.location.hash = 'scandinavian';
 	});
 	$(".thai").click(function() {
 		console.log("Chose Thai.");
 		$(".Thai").addClass("active");
+		window.location.hash = 'thai';
 	});
 	$(".vietnamese").click(function() {
 		console.log("Chose Vietnamese.");
 		$(".Vietnamese").addClass("active");
+		window.location.hash = 'vietnamese';
+
 	});
 
 
+
+	$('li').on('click',function(){
+  	$('li').removeClass('active');
+  	$(this).addClass('active');
+	});
+
+	var url = window.location.hash;
+	var hash;
+	if (url.indexOf('#') > -1){
+	    hash = url.split('#')[1];
+	}
+	$(function(){
+
+		$('.'+hash).each(function(){
+			$(this).addClass('active');
+		});
+	});
+
+	$(function() {
+	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
+	});
+
 </script>
 {% endblock %}
+
+<style>
+.selected {background: yellow;}
+</style>
