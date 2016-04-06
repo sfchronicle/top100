@@ -12,6 +12,11 @@
     display: block;
     clear: none !important;
   }
+  &.active-secondary {
+    display: block;
+    clear: none !important;
+    background: red;
+  }
 }
 
 header {
@@ -106,7 +111,7 @@ li {
 }
 
 #top-image {
-  
+
   background-image: url('../images/restaurant_wide.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -123,15 +128,15 @@ li {
     min-height: 210px;
     background-image: url("../images/restaurant_wide.jpg");
   }
-  
+
 }
 #intro-text {
   display: inline-block;
   padding: 2em 0 0;
 
   p {
-  
-    
+
+
     @include media (max-width $small-breakpoint) {
     font-size:0.9em;
     }
