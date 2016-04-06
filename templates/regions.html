@@ -20,10 +20,8 @@
 		<ul class="subregions-block">
 			<li class="button-regions bernalheights san-subregion subregion">Bernal Heights</li>
 			<li class="button-regions castro san-subregion subregion">Castro</li>
-			<li class="button-regions dogpatch san-subregion subregion">Dogpatch</li>
 			<li class="button-regions embarcadero san-subregion subregion">Embarcadero</li>
 			<li class="button-regions financialdistrict san-subregion subregion">Financial District</li>
-			<li class="button-regions lowerhaight san-subregion subregion">Lower Haight</li>
 			<li class="button-regions hayesvalley san-subregion subregion">Hayes Valley</li>
 			<li class="button-regions marina san-subregion subregion">Marina/Cow Hollow</li>
 			<li class="button-regions mission san-subregion subregion">Mission</li>
@@ -39,8 +37,6 @@
 
 			<li class="fairfax north-subregion subregion">Fairfax</li>
 			<li class="healdsburg north-subregion subregion">Healdsburg</li>
-			<li class="larkspur north-subregion subregion">Larkspur</li>
-			<li class="millvalley north-subregion subregion">Mill Valley</li>
 			<li class="napa north-subregion subregion">Napa</li>
 			<li class="olema north-subregion subregion">Olema</li>
 			<li class="sausalito north-subregion subregion">Sausalito</li>
@@ -78,32 +74,24 @@
 
 	// filtering based on region
 	$(".sf").click(function() {
-		console.log("Chose region SF.");
-		// $(".San").addClass("active");
 		$(".san-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".northbay").click(function() {
-		console.log("Chose region North Bay.");
-		// $(".North").addClass("active");
 		$(".north-subregion").addClass("active");
 		$(".san-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".eastbay").click(function() {
-		console.log("Chose region East Bay.");
-		// $(".East").addClass("active");
 		$(".east-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".san-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".southbay").click(function() {
-		console.log("Chose region South Bay.");
-		// $(".South").addClass("active");
 		$(".south-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
@@ -113,10 +101,8 @@
 	$(".subregion").click(function() {
 		$(".Bernal").removeClass("active");
 		$(".Castro").removeClass("active");
-		$(".Dogpatch").removeClass("active");
 		$(".Embarcadero").removeClass("active");
 		$(".Financial").removeClass("active");
-		$(".Lower").removeClass("active");
 		$(".Hayes").removeClass("active");
 		$(".Hollow").removeClass("active");
 		$(".Mission").removeClass("active");
@@ -131,8 +117,6 @@
 		$(".Addition").removeClass("active");
 		$(".Fairfax").removeClass("active");
 		$(".Healdsburg").removeClass("active");
-		$(".Larkspur").removeClass("active");
-		$(".Mill").removeClass("active");
 		$(".Napa").removeClass("active");
 		$(".Olema").removeClass("active");
 		$(".Sausalito").removeClass("active");
@@ -150,140 +134,99 @@
 
 	// san francisco
 	$(".bernalheights").click(function() {
-		console.log("Chose bernalheights.");
 		$(".Bernal").addClass("active");
 		window.location.hash = 'sf/bernal';
 	});
 	$(".castro").click(function() {
-		console.log("Chose castro.");
 		$(".Castro").addClass("active");
 		window.location.hash = 'sf/castro';
 	});
-	$(".dogpatch").click(function() {
-		console.log("Chose dogpatch.");
-		$(".Dogpatch").addClass("active");
-	});
 	$(".embarcadero").click(function() {
-		console.log("Chose embarcadero.");
 		$(".Embarcadero").addClass("active");
 	});
 	$(".financialdistrict").click(function() {
-		console.log("Chose financialdistrict.");
 		$(".Financial").addClass("active");
 	});
-	$(".lowerhaight").click(function() {
-		console.log("Chose lowerhaight.");
-		$(".Lower").addClass("active");
-	});
 	$(".hayesvalley").click(function() {
-		console.log("Chose hayesvalley.");
 		$(".Hayes").addClass("active");
 	});
 	$(".marina").click(function() {
-		console.log("Chose marina.");
 		$(".Hollow").addClass("active");
 	});
 	$(".mission").click(function() {
-		console.log("Chose mission.");
 		$(".Mission").addClass("active");
 	});
 	$(".noevalley").click(function() {
-		console.log("Chose noevalley.");
 		$(".Noe").addClass("active");
 	});
 	$(".northbeach").click(function() {
-		console.log("Chose northbeach.");
 		$(".Beach").addClass("active");
 	});
 	$(".presidio").click(function() {
-		console.log("Chose presidio.");
 		$(".Presidio").addClass("active");
 	});
 	$(".pacificheights").click(function() {
-		console.log("Chose pacificheights.");
 		$(".Heights").addClass("active");
 	});
 	$(".russianhill").click(function() {
-		console.log("Chose russianhill.");
 		$(".Russian").addClass("active");
 	});
 	$(".soma").click(function() {
-		console.log("Chose soma.");
 		$(".SoMa").addClass("active");
 	});
 	$(".tenderloin").click(function() {
-		console.log("Chose tenderloin.");
 		$(".Tenderloin").addClass("active");
 	});
 	$(".richmond").click(function() {
-		console.log("Chose richmond.");
 		$(".Richmond").addClass("active");
 	});
 	$(".westernaddition").click(function() {
-		console.log("Chose westernaddition.");
 		$(".Addition").addClass("active");
 	});
 
 
 	// north bay
 	$(".fairfax").click(function() {
-		console.log("Chose fairfax.");
 		$(".Fairfax").addClass("active");
 	});
 	$(".healdsburg").click(function() {
-		console.log("Chose healdsburg.");
 		$(".Healdsburg").addClass("active");
 	});
 	$(".larkspur").click(function() {
-		console.log("Chose larkspur.");
 		$(".Larkspur").addClass("active");
 	});
-	$(".millvalley").click(function() {
-		console.log("Chose millvalley.");
-		$(".Mill").addClass("active");
-	});
 	$(".napa").click(function() {
-		console.log("Chose napa.");
 		$(".Napa").addClass("active");
 	});
 	$(".olema").click(function() {
-		console.log("Chose olema.");
 		$(".Olema").addClass("active");
 	});
 	$(".sausalito").click(function() {
-		console.log("Chose sausalito.");
 		$(".Sausalito").addClass("active");
 	});
 	$(".sthelena").click(function() {
-		console.log("Chose sthelena.");
 		$(".Helena").addClass("active");
 	});
 	$(".yountville").click(function() {
-		console.log("Chose yountville.");
 		$(".Yountville").addClass("active");
 	});
 
 	// east bay
 	$(".berkeley").click(function() {
-		console.log("Chose berkeley.");
 		$(".Berkeley").addClass("active");
 	});
 	$(".oakland").click(function() {
-		console.log("Chose oakland.");
 		$(".Oakland").addClass("active");
 	});
 	$(".portcosta").click(function() {
-		console.log("Chose portcosta.");
 		$(".Port").addClass("active");
 	});
 
 	// south bay
 	$(".burlingame").click(function() {
-		console.log("Chose burlingame.");
 		$(".Burlingame").addClass("active");
 	});
 	$(".losgatos").click(function() {
-		console.log("Chose losgatos.");
 		$(".Gatos").addClass("active");
 	});
 
