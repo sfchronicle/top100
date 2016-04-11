@@ -10,8 +10,8 @@
 
 <div class="cuisines">
 	<ul class="cuisines-block">
-		<li id="american" class="american cuisine button">American</li>
-		<li id="belgian" class="belgian cuisine button">Belgian</li>
+		<li class="american cuisine button">American</li>
+		<li class="belgian cuisine button">Belgian</li>
 		<li class="british cuisine button">British</li>
 		<li class="chinese cuisine button">Chinese</li>
 		<li class="drink-centric cuisine button">Drink-centric</li>
@@ -44,7 +44,7 @@
 	</div>
 
 	{% for r in restaurants %}
-	<div class="columns restaurant {{ r.Cuisine }} {{ r.Cuisine|lower }}">
+	<div class="columns restaurant {{ r.Cuisine }} {{ r.Cuisine|lower }} {{r.Name}}">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
 		<h5>{{ r.Name }}</h5>
 	</div>
@@ -118,13 +118,17 @@
 	});
 	$(".hawaiian").click(function() {
 		$(".Hawaiian").addClass("active");
-		$(".American").addClass("active-secondary");
+		$(".Range").addClass("active-secondary");
+		$(".Bix").addClass("active-secondary");
 		window.location.hash = 'hawaiian';
 	});
 	$(".indian").click(function() {
 		$(".Indian").addClass("active");
+		//$(".Indian").attr("id","active");
 		$(".Vietnamese").addClass("active-secondary");
+		//$(".Vietnamese").attr("id","active-secondary");
 		$(".Thai").addClass("active-secondary");
+		//$(".Thai").attr("id","active-secondary");
 		window.location.hash = 'indian';
 	});
 	$(".italian").click(function() {
@@ -157,18 +161,26 @@
 	});
 	$(".scandinavian").click(function() {
 		$(".Scandinavian").addClass("active");
+		$(".Belgian").addClass("active-secondary");
+		$(".British").addClass("active-secondary");
 		window.location.hash = 'scandinavian';
 	});
 	$(".thai").click(function() {
 		$(".Thai").addClass("active");
+		//$(".Thai").attr("id","active");
 		$(".Indian").addClass("active-secondary");
+		//$(".Indian").attr("id","active-secondary");
 		$(".Vietnamese").addClass("active-secondary");
+		//$(".Vietnamese").attr("id","active-secondary");
 		window.location.hash = 'thai';
 	});
 	$(".vietnamese").click(function() {
 		$(".Vietnamese").addClass("active");
+		//$(".Vietnamese").attr("id","active");
 		$(".Thai").addClass("active-secondary");
+		//$(".Thai").attr("id","active-secondary");
 		$(".Indian").addClass("active-secondary");
+		//$(".Indian").attr("id","active-secondary");
 		window.location.hash = 'vietnamese';
 	});
 

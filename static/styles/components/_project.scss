@@ -3,19 +3,39 @@
   display: none;
   &.active {
     display: inline-block;
+    // display: flex;
+    // flex-flow: row;
   }
 }
+
+// #active {
+//   display: flex !important;
+//   order: 1 !important;
+//   -webkit-box-ordinal-group: 1 !important;
+//   -moz-box-ordinal-group: 1 !important;
+//   box-ordinal-group: 1 !important;
+// }
+// #active-secondary {
+//   display: flex !important;
+//   order: 2 !important;
+//   -webkit-box-ordinal-group: 2 !important;
+//   -moz-box-ordinal-group: 2 !important;
+//   box-ordinal-group: 2 !important;
+// }
 
 .restaurant {
   display: none;
   &.active {
-    display: block;
+    display: block; //flex; //block;
     clear: none !important;
+    margin: 20px;
   }
   &.active-secondary {
-    display: block;
+    display: block; //flex; //block;
     clear: none !important;
-    background: red;
+    background: #595959;
+    padding: 10px;
+    margin: 10px;
   }
 }
 
