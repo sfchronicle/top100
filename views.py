@@ -46,11 +46,3 @@ def restaurant_view():
 	for restaurant in Restaurant.query.all():
 		yield { 'slug': restaurant.slug }
 
-
-@app.route('/guide/one-of-a-kind/')
-def guide_view():
-	guides = Guide.query.all()
-	return render_template('guide.html', title='guide', guides=guides)	
-
-
-

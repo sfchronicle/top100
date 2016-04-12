@@ -104,6 +104,11 @@ li {
     @include media(max-width $small-breakpoint) {
       font-size:1.5em;
     }
+
+  }
+  
+  @include media (max-width 542px){
+    display:none;
   }
 }
 
@@ -147,6 +152,10 @@ li {
   @include media (max-width $small-breakpoint) {
     min-height: 210px;
     background-image: url("../images/restaurant_wide.jpg");
+  }
+
+  @include media (max-width 542px){
+    min-height:100px;
   }
 
 }

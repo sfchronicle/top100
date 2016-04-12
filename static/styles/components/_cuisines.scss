@@ -1,12 +1,21 @@
 .cuisines {
 	background: #EBEBEB;
 	text-align: center;
+	@include media (max-width 542px){
+		overflow:scroll;
+	}
 }
 
 .cuisines-block .button {
 
 	@include media (max-width 780px){
 		padding: 8px;
+	}
+}
+
+.cuisines-block {
+	@include media (max-width 542px){
+		width: 542px;
 	}
 }
 

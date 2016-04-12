@@ -29,16 +29,18 @@ nav.sections, nav.select-cuisine, nav.select-region, nav.select-guide {
 
     @include media (max-width 670px) {
       width: 100%;
-      height: 50px;
-      overflow-x: scroll;
-      white-space: nowrap;
-      font-size: 1.2em;
+      height: 40px;
+      font-size: 14px;
+      text-align:left;
     }
   }
 
   li {
-    display: inline-block;
     position: relative;
+
+    @include media (max-width $small-breakpoint){
+        width: 24%;
+    }
   }
 
   .active {
@@ -63,7 +65,7 @@ nav.sections, nav.select-cuisine, nav.select-region, nav.select-guide {
 
 nav.sections {
   
-  a {
+  li {
 
   }
 
@@ -96,4 +98,19 @@ nav.sections {
 .active-page {
   background: #EBEBEB;
   padding-bottom: 11px !important;
+}
+
+.mobile-search {
+  display:none;
+
+  @include media (max-width 620px){
+    display:inline-block;
+  }
+}
+
+.search {
+
+  @include media (max-width 620px){
+    display:none;
+  }
 }
