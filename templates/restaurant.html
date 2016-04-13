@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% set active_page = active_page|default('index') -%}
 
 {% block title %}{{restaurant.Name}} | SF Chronicle{% endblock %}
 
@@ -13,10 +12,8 @@
 <div class="container">
 
 	<div class="rest-img">
-		<h1>{{restaurant.Name}}</h1>
-	    <p>By: Michael Bauer</p>
-	    <div class="fotorama" data-width="100%"
-     data-ratio="3/2" data-arrows="always" data-nav="false">
+		<h1>{{restaurant.Name}}</h1><br>
+	    <div class="fotorama" data-width="100%" data-arrows="always" data-nav="false">
 	    	<img src="{{restaurant.photo1}}" alt="" />
 	    	<img src="{{restaurant.photo2}}" alt="" />
 	    </div>
@@ -33,7 +30,7 @@
 				  frameborder="0" style="border:0"
 				  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCUHnEWTjMUWg6pGXGUqz6-yNwZhnmL80w&q={{restaurant.GoogleAddress}}&attribution_source=Google+Maps+Embed+API" allowfullscreen>
 				</iframe>
-			</div>
+			</div><br>
 
 		    <p><i class="fa fa-link"> </i> <a href="{{restaurant.Website}}">{{restaurant.Website}}</a></p>
 		    <p><i class="fa fa-phone"></i> {{restaurant.Phone}}</p>
@@ -62,7 +59,7 @@
   		</div>
 
 	  	<div id="article">
-	    
+		    <p>By: Michael Bauer</p>
 		    <p>{{restaurant.article}}</p>
 		    <p class="specialties"><span>Specialties: </span>{{restaurant.Specialties}}</p>
 	  	</div>

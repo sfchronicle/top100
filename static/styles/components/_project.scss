@@ -28,7 +28,7 @@
   &.active {
     display: block; //flex; //block;
     clear: none !important;
-    margin: 20px;
+   // margin: 20px;
   }
   &.active-secondary {
     display: block; //flex; //block;
@@ -202,4 +202,25 @@ li {
 
 .guide {
   margin-bottom:2em;
+}
+
+footer p{
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+#top100 {
+  
+  @include media (max-width $small-breakpoint) {
+    h5{
+      font-size:0.9em;
+    }
+  }
+
+}
+
+.cuisine-label {
+  background: rgba(224, 58, 66, 0.37);
+  padding: 3px 5px;
+  font-size: 0.9em;
 }

@@ -27,10 +27,10 @@
 		</div>
 		
 	</div>
-	<div id="top100" class="row small-up-2 large-up-4 restaurants intro">
+	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants intro">
 		{% for r in restaurants %}
 		<div class="column restaurant-index">
-			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 			<h5>{{ r.Name }}</h5>
 		</div>
 		{% endfor %}

@@ -35,17 +35,11 @@
 
 <div id="top100" class="row restaurants small-up-2 medium-up-3 large-up-4">
 
-	<div id="cuisines-landing">
-		<h1>Cuisines</h1>
-		<p>The favorite weekend meal, reimagined by great chefs. Browse restaurants by cuisines above.</p>
-		<div>
-			<img src="http://ww4.hdnux.com/photos/36/00/01/7864411/3/1600x1600.jpg">
-		</div>
-	</div>
-
 	{% for r in restaurants %}
 	<div class="columns restaurant {{ r.Cuisine }} {{ r.Cuisine|lower }} {{r.Name}}">
-		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+		<a href="{{ url_for('restaurant_view', slug=r.slug) }}">
+			<img class="thumbnail" src="{{r.thumbnail}}" />
+		</a>
 		<h5>{{ r.Name }}</h5>
 	</div>
 	{% endfor %}

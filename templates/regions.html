@@ -35,20 +35,20 @@
 			<li class="button-regions richmond san-subregion subregion">The Richmond</li>
 			<li class="button-regions westernaddition san-subregion subregion">Western Addition</li>
 
-			<li class="fairfax north-subregion subregion">Fairfax</li>
-			<li class="healdsburg north-subregion subregion">Healdsburg</li>
-			<li class="napa north-subregion subregion">Napa</li>
-			<li class="olema north-subregion subregion">Olema</li>
-			<li class="sausalito north-subregion subregion">Sausalito</li>
-			<li class="sthelena north-subregion subregion">St. Helena</li>
-			<li class="yountville north-subregion subregion">Yountville</li>
+			<li class="button-regions fairfax north-subregion subregion">Fairfax</li>
+			<li class="button-regions healdsburg north-subregion subregion">Healdsburg</li>
+			<li class="button-regions napa north-subregion subregion">Napa</li>
+			<li class="button-regions olema north-subregion subregion">Olema</li>
+			<li class="button-regions sausalito north-subregion subregion">Sausalito</li>
+			<li class="button-regions sthelena north-subregion subregion">St. Helena</li>
+			<li class="button-regions yountville north-subregion subregion">Yountville</li>
 
-			<li class="berkeley east-subregion subregion">Berkeley</li>
-			<li class="oakland east-subregion subregion">Oakland</li>
-			<li class="portcosta east-subregion subregion">Port Costa</li>
+			<li class="button-regions berkeley east-subregion subregion">Berkeley</li>
+			<li class="button-regions oakland east-subregion subregion">Oakland</li>
+			<li class="button-regions portcosta east-subregion subregion">Port Costa</li>
 
-			<li class="burlingame south-subregion subregion">Burlingame</li>
-			<li class="losgatos south-subregion subregion">Los Gatos</li>
+			<li class="button-regions burlingame south-subregion subregion">Burlingame</li>
+			<li class="button-regions losgatos south-subregion subregion">Los Gatos</li>
 
 		</ul>
 	</div>
@@ -56,7 +56,7 @@
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
 		{% for r in restaurants %}
 		<div class="columns restaurant {{r.SubRegion}} {{r.SubRegion|lower}}">
-			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="http://placehold.it/300x200"></a>
+			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 			<h5>{{ r.Name }}</h5>
 		</div>
 		{% endfor %}
@@ -135,99 +135,127 @@
 	// san francisco
 	$(".bernalheights").click(function() {
 		$(".Bernal").addClass("active");
-		window.location.hash = 'sf/bernal';
+		window.location.hash = '/sf/bernal';
 	});
 	$(".castro").click(function() {
 		$(".Castro").addClass("active");
-		window.location.hash = 'sf/castro';
+		window.location.hash = '/sf/castro';
 	});
 	$(".embarcadero").click(function() {
 		$(".Embarcadero").addClass("active");
+		window.location.hash = '/sf/embarcadero';
 	});
 	$(".financialdistrict").click(function() {
 		$(".Financial").addClass("active");
+		window.location.hash = '/sf/financialdistrict';
+
 	});
 	$(".hayesvalley").click(function() {
 		$(".Hayes").addClass("active");
+		window.location.hash = '/sf/hayesvalley';
 	});
 	$(".marina").click(function() {
 		$(".Hollow").addClass("active");
+		window.location.hash = '/sf/marina';
 	});
 	$(".mission").click(function() {
 		$(".Mission").addClass("active");
+		window.location.hash = '/sf/mission';
 	});
 	$(".noevalley").click(function() {
 		$(".Noe").addClass("active");
+		window.location.hash = '/sf/noevalley';
 	});
 	$(".northbeach").click(function() {
 		$(".Beach").addClass("active");
+		window.location.hash = '/sf/northbeach';
 	});
 	$(".presidio").click(function() {
 		$(".Presidio").addClass("active");
+		window.location.hash = '/sf/presidio';
 	});
 	$(".pacificheights").click(function() {
 		$(".Heights").addClass("active");
+		window.location.hash = '/sf/pacificheights';
 	});
 	$(".russianhill").click(function() {
 		$(".Russian").addClass("active");
+		window.location.hash = '/sf/russianhill';
 	});
 	$(".soma").click(function() {
 		$(".SoMa").addClass("active");
+		window.location.hash = '/sf/soma';
 	});
 	$(".tenderloin").click(function() {
 		$(".Tenderloin").addClass("active");
+		window.location.hash = '/sf/tenderloin';
 	});
 	$(".richmond").click(function() {
 		$(".Richmond").addClass("active");
+		window.location.hash = '/sf/richmond';
 	});
 	$(".westernaddition").click(function() {
 		$(".Addition").addClass("active");
+		window.location.hash = '/sf/westernaddition';
 	});
 
 
 	// north bay
 	$(".fairfax").click(function() {
 		$(".Fairfax").addClass("active");
+		window.location.hash = '/northbay/fairfax';
 	});
 	$(".healdsburg").click(function() {
 		$(".Healdsburg").addClass("active");
+		window.location.hash = '/northbay/healdsburg';
 	});
 	$(".larkspur").click(function() {
 		$(".Larkspur").addClass("active");
+		window.location.hash = '/northbay/larkspur';
 	});
 	$(".napa").click(function() {
 		$(".Napa").addClass("active");
+		window.location.hash = '/northbay/napa';
 	});
 	$(".olema").click(function() {
 		$(".Olema").addClass("active");
+		window.location.hash = '/northbay/olema';
 	});
 	$(".sausalito").click(function() {
 		$(".Sausalito").addClass("active");
+		window.location.hash = '/northbay/sausalito';
 	});
 	$(".sthelena").click(function() {
 		$(".Helena").addClass("active");
+		window.location.hash = '/northbay/sthelena';
 	});
 	$(".yountville").click(function() {
 		$(".Yountville").addClass("active");
+		window.location.hash = '/northbay/yountville';
 	});
 
 	// east bay
 	$(".berkeley").click(function() {
 		$(".Berkeley").addClass("active");
+		window.location.hash = '/eastbay/berkeley';
 	});
 	$(".oakland").click(function() {
 		$(".Oakland").addClass("active");
+		window.location.hash = '/eastbay/oakland';
 	});
 	$(".portcosta").click(function() {
 		$(".Port").addClass("active");
+		window.location.hash = '/eastbay/portcosta';
 	});
 
 	// south bay
 	$(".burlingame").click(function() {
 		$(".Burlingame").addClass("active");
+		window.location.hash = '/southbay/burlingame';
 	});
 	$(".losgatos").click(function() {
 		$(".Gatos").addClass("active");
+		window.location.hash = '/southbay/losgatos';
 	});
 
 	$('.button').on('click',function(){
@@ -248,13 +276,13 @@
 
 	$(function(){
 		$('.'+hash).each(function(){
-			$(this).addClass('subregion-active');
+			$(this).addClass('region-active');
 		});
 	});
 
 	$(document).foundation();
 
-		$(function() {
+	$(function() {
 	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
 	});
 
