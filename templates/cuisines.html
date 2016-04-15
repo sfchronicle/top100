@@ -2,8 +2,14 @@
 
 {% block title %}Cuisines | SF Chronicle{% endblock %}
 
-{% block head %}
+{% block head %}{% endblock %}
 
+{% block header %}
+    <h1>CUISINES</h1>
+{% endblock %}
+
+{% block social %}
+	{% include 'components/cuisines_social.html' %}
 {% endblock %}
 
 {% block content %}
@@ -51,6 +57,7 @@
 <script>
   $(document).ready(function() {
     App.init();
+    $(".restaurant").addClass("active");
   });
 
 	$(".cuisine").click(function() {
@@ -82,14 +89,14 @@
 	});
 	$(".belgian").click(function() {
 		$(".Belgian").addClass("active");
-		$(".British").addClass("active-secondary");
-		$(".Greek").addClass("active-secondary");
+		// $(".British").addClass("active-secondary");
+		// $(".Greek").addClass("active-secondary");
 		window.location.hash = 'belgian';
 	});
 	$(".british").click(function() {
 		$(".British").addClass("active");
-		$(".Belgian").addClass("active-secondary");
-		$(".Greek").addClass("active-secondary");
+		// $(".Belgian").addClass("active-secondary");
+		// $(".Greek").addClass("active-secondary");
 		window.location.hash = 'british';
 	});
 	$(".chinese").click(function() {
@@ -106,23 +113,20 @@
 	});
 	$(".greek").click(function() {
 		$(".Greek").addClass("active");
-		$(".Belgian").addClass("active-secondary");
-		$(".British").addClass("active-secondary");
+		// $(".Belgian").addClass("active-secondary");
+		// $(".British").addClass("active-secondary");
 		window.location.hash = 'greek';
 	});
 	$(".hawaiian").click(function() {
 		$(".Hawaiian").addClass("active");
-		$(".Range").addClass("active-secondary");
-		$(".Bix").addClass("active-secondary");
+		// $(".Range").addClass("active-secondary");
+		// $(".Bix").addClass("active-secondary");
 		window.location.hash = 'hawaiian';
 	});
 	$(".indian").click(function() {
 		$(".Indian").addClass("active");
-		//$(".Indian").attr("id","active");
-		$(".Vietnamese").addClass("active-secondary");
-		//$(".Vietnamese").attr("id","active-secondary");
-		$(".Thai").addClass("active-secondary");
-		//$(".Thai").attr("id","active-secondary");
+		// $(".Vietnamese").addClass("active-secondary");
+		// $(".Thai").addClass("active-secondary");
 		window.location.hash = 'indian';
 	});
 	$(".italian").click(function() {
@@ -155,26 +159,20 @@
 	});
 	$(".scandinavian").click(function() {
 		$(".Scandinavian").addClass("active");
-		$(".Belgian").addClass("active-secondary");
-		$(".British").addClass("active-secondary");
+		// $(".Belgian").addClass("active-secondary");
+		// $(".British").addClass("active-secondary");
 		window.location.hash = 'scandinavian';
 	});
 	$(".thai").click(function() {
 		$(".Thai").addClass("active");
-		//$(".Thai").attr("id","active");
-		$(".Indian").addClass("active-secondary");
-		//$(".Indian").attr("id","active-secondary");
-		$(".Vietnamese").addClass("active-secondary");
-		//$(".Vietnamese").attr("id","active-secondary");
+		// $(".Indian").addClass("active-secondary");
+		// $(".Vietnamese").addClass("active-secondary");
 		window.location.hash = 'thai';
 	});
 	$(".vietnamese").click(function() {
 		$(".Vietnamese").addClass("active");
-		//$(".Vietnamese").attr("id","active");
-		$(".Thai").addClass("active-secondary");
-		//$(".Thai").attr("id","active-secondary");
-		$(".Indian").addClass("active-secondary");
-		//$(".Indian").attr("id","active-secondary");
+		// $(".Thai").addClass("active-secondary");
+		// $(".Indian").addClass("active-secondary");
 		window.location.hash = 'vietnamese';
 	});
 
@@ -197,9 +195,9 @@
 		});
 	});
 
-	$(function() {
-	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
-	});
+	// $(function() {
+	//   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
+	// });
 
 </script>
 {% endblock %}

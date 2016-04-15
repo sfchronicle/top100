@@ -5,13 +5,14 @@
     <title>{% block title %}{% endblock %}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    {% block meta %}{% endblock %}
     <link rel="icon" href="http://www.sfchronicle.com/favicon.ico?v=2">
     {% block head %}{% endblock %}
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
-    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     
 
   </head>
@@ -24,17 +25,14 @@
     <header>
         <div id="top-image" class="large-12">
             
-
+          {% block topimage %}{% endblock %}
             <div class="top100-logo">
                 <img src="{{ url_for('static', filename='images/logo.png') }}" />
             </div>
         
 
             <div class="title">
-                <a class="logo" href="http://www.sfchronicle.com">
-                    <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
-                </a>
-                <h1>TOP 100 RESTAURANTS</h1>
+                {% block header %} {% endblock %}
                 {% block social %}{% endblock %}
             </div>
         </div>
@@ -48,7 +46,7 @@
         <div class="row">
             <div class="large-12 columns" style="text-align:center;">
                 <div class="top100-logo">
-                  <img src="{{ url_for('static', filename='images/logo.png') }}" />
+                  <img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 200px;"/>
                 </div><br>
                 <p>Written by <span class="credit-name">Michael Bauer</span> &bull; Edited by <span class="credit-name">Editors</span> &bull; Web development by <span class="credit-name">Emma O'Neill and Lucio Villa</span> &bull; Images from <span class="credit-name">Photographers</span>
                 </p>

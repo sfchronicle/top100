@@ -6,6 +6,16 @@
 
 {% endblock %}
 
+{% block header %}
+    <h1>SEARCH</h1>
+{% endblock %}
+
+{% block social %}
+
+	{% include 'components/search_social.html' %}
+
+{% endblock %}
+
 {% block content %}
 
 <div class="search-container">
@@ -63,9 +73,9 @@
 
 	});
 
-	$(function() {
-	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
-	});
+	// $(function() {
+	//   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
+	// });
 
 
 </script>

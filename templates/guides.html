@@ -6,6 +6,14 @@
 
 {% endblock %}
 
+{% block header %}
+    <h1>GUIDES</h1>
+{% endblock %}
+
+{% block social %}
+	{% include 'components/guides_social.html' %}
+{% endblock %}
+
 {% block content %}
 
 
@@ -38,7 +46,7 @@
 			<h5>Best of Brunch</h5>
 		</div>
 		<div class="column outdoor guide">
-			<a href="#"><img class="thumbnail" src="http://ww4.hdnux.com/photos/44/52/02/9609391/3/premium_landscape.jpg"></a>
+			<a href="#"><img class="thumbnail" src="http://ww3.hdnux.com/photos/44/51/77/9609182/3/premium_landscape.jpg"></a>
 			<h5>Outdoor</h5>
 		</div>
 		<div class="column saturdaylunch guide">
@@ -52,10 +60,6 @@
 		<div class="column historic guide">
 			<a href="#"><img class="thumbnail" src="http://ww4.hdnux.com/photos/44/53/10/9613839/3/premium_landscape.jpg"></a>
 			<h5>Historic</h5>
-		</div>
-		<div class="column views guide">
-			<a href="#"><img class="thumbnail" src="http://placehold.it/300x200"></a>
-			<h5>Views</h5>
 		</div>
 		<div class="column new guide">
 			<a href="#"><img class="thumbnail" src="http://ww2.hdnux.com/photos/44/51/65/9608533/3/premium_landscape.jpg"></a>
@@ -86,9 +90,9 @@
   });
 
 
-	$(function() {
-	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
-	});
+	// $(function() {
+	//   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
+	// });
 
 </script>
 {% endblock %}

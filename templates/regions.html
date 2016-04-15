@@ -6,6 +6,14 @@
 
 {% endblock %}
 
+{% block header %}
+    <h1>REGIONS</h1>
+{% endblock %}
+
+{% block social %}
+	{% include 'components/regions_social.html' %}
+{% endblock %}
+
 {% block content %}
 
 	<div class="regions">
@@ -282,9 +290,6 @@
 
 	$(document).foundation();
 
-	$(function() {
-	  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-page');
-	});
 
 </script>
 {% endblock %}

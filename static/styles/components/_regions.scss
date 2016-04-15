@@ -1,6 +1,15 @@
 .regions {
 	background: #EBEBEB;
 	text-align: center;
+  @include media (max-width 360px){
+    overflow:scroll;
+  }
+}
+
+.regions-block {
+  @include media (max-width 360px){
+    width: 360px;
+  }
 }
 
 .regions-block .button {
