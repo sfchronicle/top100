@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Saturday Lunch - Guide | SF Chronicle{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block header %}
+    <h1>Saturday Lunch</h1>
+{% endblock %}
+
+{% block content %}
+
+	<div class="regions">
+		<ul class="regions-block">
+		  	<li class="oneofakind button">One of a Kind</li>
+		  	<li class="greatpizza button">Great Pizza</li>
+			<li class="topburgers button">Top Burgers</li>
+			<li class="openlate button">Open Late</li>
+			<li class="exceptionalbars button">Exceptional Bars</li>
+			<li class="bestofbrunch button">Best of Brunch</li>
+			<li class="outdoor button">Outdoor</li>
+			<li class="saturdaylunch button active">Saturday Lunch</li>
+			<li class="top100classics button">Top 100 Classics</li>
+			<li class="historic button">Historic</li>
+			<li class="views button">Views</li>
+			<li class="new button">New</li>
+			<li class="privaterooms button">Private Rooms</li>
+			<li class="tastingmenus button">Tasting Menus</li>
+			<li class="fourstars button">Four Stars</li>
+		</ul>
+	</div>
+
+
+	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
+
+		{% for g in guides %}
+			
+			{% if (g.SaturdayLunch == 'x') %}
+
+				{% for r in restaurants %}
+					{% if g.Name == r.Name %}
+				<div class="column guide">
+					<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
+					<h5>{{r.Name}}</h5>
+				</div>
+				{% endif %}
+
+				{% endfor %}
+
+
+
+			{% endif %}
+
+		{% endfor %}
+
+	</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+  $(document).ready(function() {
+    App.init();
+  });
+
+</script>
+{% endblock %}

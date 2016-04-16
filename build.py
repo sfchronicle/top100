@@ -6,8 +6,8 @@ from views import *
 
 BUILD_DIR = os.path.join(os.path.realpath(os.path.dirname(__file__)), 'build')
 ROOT_URL = '//extras.sfgate.com'
-TEST_PROJECT_NAME = 'test-proj/top100-restaurants'
-PROJECT_NAME = '2016/top100-restaurants'
+TEST_PROJECT_NAME = 'test-proj/top-100-restaurants'
+PROJECT_NAME = '2016/top-100-restaurants'
 
 
 if __name__ == '__main__':

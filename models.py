@@ -45,7 +45,6 @@ class Guide(db.Model):
     SaturdayLunch = db.Column(db.Text())
     Top100Classics = db.Column(db.Text())
     Historic = db.Column(db.Text())
-    Views = db.Column(db.Text())
     New = db.Column(db.Text())
     PrivateRooms = db.Column(db.Text())
     TastingMenus = db.Column(db.Text())
