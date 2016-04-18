@@ -2,6 +2,11 @@
 
 {% block title %}{{restaurant.Name}} | SF Chronicle{% endblock %}
 
+{% block hearst_title %}Top 100 Restaurants: {{restaurant.Name|safe}}{% endblock %}
+{% block hearst_class %}article{% endblock %}
+{% block channelpath %} :: Restaurant :: {{restaurant.Name|safe}} {% endblock %}
+{% block author %}Michael Bauer{% endblock %}
+
 {% block head %}
 {% endblock %}
 
