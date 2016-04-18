@@ -7,6 +7,11 @@
 {% block channelpath %} :: Restaurant :: {{restaurant.Name|safe}} {% endblock %}
 {% block author %}Michael Bauer{% endblock %}
 
+{% block twitter_url %}{{ url_for('restaurant_view', slug=restaurant.slug) }}{% endblock %}
+{% block fb_url %}{{ url_for('restaurant_view', slug=restaurant.slug) }}{% endblock %}
+{% block fb_title %}{% endblock %}
+{% block fb_description %}{% endblock %}
+
 {% block head %}
 {% endblock %}
 
