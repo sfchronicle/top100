@@ -13,6 +13,8 @@ class Restaurant(db.Model):
     Cuisine = db.Column(db.Text())
     Phone = db.Column(db.Text())
     Noise = db.Column(db.Text())
+    Meals = db.Column(db.Text())
+    Prices = db.Column(db.Text())
     photo1 = db.Column(db.Text())
     photo2 = db.Column(db.Text())
     thumbnail = db.Column(db.Text())
@@ -26,7 +28,7 @@ class Restaurant(db.Model):
     article = db.Column(db.Text())
 
     guides = db.relationship('Guide', backref=db.backref('restaurant', lazy='joined'), lazy='dynamic')
-  
+
     def __unicode__(self):
         return self.name
 

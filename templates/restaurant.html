@@ -16,7 +16,7 @@
 	    	<img src="{{restaurant.photo1}}" alt="" />
 	    	<img src="{{restaurant.photo2}}" alt="" />
 	    </div>
-	  
+
 	</div>
 
 	<div class="content">
@@ -46,15 +46,17 @@
                 <p>Noise Level: <i class="fa fa-bell"></i>
             	   <i class="fa fa-bell"></i>
             	   <i class="fa fa-bell"></i>
-            	   <i class="fa fa-bell"></i></p>	   
+            	   <i class="fa fa-bell"></i></p>
             {% elif restaurant.Noise == 'BOMB' %}
                 <p>Noise Level: <i class="fa fa-bomb"></i></p>
-            {% endif %}
-		    
+          {% endif %}
+					<p><i class="fa fa-money"></i> {{restaurant.Prices}}</p>
+					<p><i class="fa fa-clock-o"></i> {{restaurant.Meals}}</p>
+
 		    {% if restaurant.Fullreviewlink %}
 			    <p><a href="{{restaurant.Fullreviewlink}}">Full Review</a></p>
 		    {% endif %}
-  		
+
   		</div>
 
 	  	<div id="article">
