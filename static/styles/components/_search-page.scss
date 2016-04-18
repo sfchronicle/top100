@@ -14,3 +14,14 @@
 	    margin: 0 auto;
     }
 }
+
+.search-restaurant {
+	@include media (max-width 452px) {
+		min-height: 226px;
+		margin-bottom: 0;
+	}
+	@include media (max-width 360px) {
+		min-height: 190px;
+		margin-bottom: 0;
+	}
+}
