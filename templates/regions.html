@@ -28,6 +28,7 @@
 		<ul class="subregions-block">
 			<li class="button-regions bernalheights san-subregion subregion">Bernal Heights</li>
 			<li class="button-regions castro san-subregion subregion">Castro</li>
+      <li class="button-regions chinatown san-subregion subregion">Chinatown</li>
 			<li class="button-regions embarcadero san-subregion subregion">Embarcadero</li>
 			<li class="button-regions financialdistrict san-subregion subregion">Financial District</li>
 			<li class="button-regions hayesvalley san-subregion subregion">Hayes Valley</li>
@@ -48,6 +49,7 @@
 			<li class="button-regions napa north-subregion subregion">Napa</li>
 			<li class="button-regions olema north-subregion subregion">Olema</li>
 			<li class="button-regions sausalito north-subregion subregion">Sausalito</li>
+      <li class="button-regions sonoma north-subregion subregion">Sonoma</li>
 			<li class="button-regions sthelena north-subregion subregion">St. Helena</li>
 			<li class="button-regions yountville north-subregion subregion">Yountville</li>
 
@@ -63,7 +65,7 @@
 
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
 		{% for r in restaurants %}
-		<div class="columns restaurant {{r.SubRegion}} {{r.SubRegion|lower}}">
+		<div class="columns restaurant {{r.Region}} {{r.SubRegion}} {{r.SubRegion|lower}}">
 			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 			<h5>{{ r.Name }}</h5>
 		</div>
@@ -78,28 +80,49 @@
 
   $(document).ready(function() {
     App.init();
+    $(".restaurant").addClass("active");
   });
 
 	// filtering based on region
 	$(".sf").click(function() {
+    $(".restaurant").removeClass("active");
+    $(".North").removeClass("active");
+    $(".East").removeClass("active");
+    $(".South").removeClass("active");
+    $(".Francisco").addClass("active");
 		$(".san-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".northbay").click(function() {
+    $(".restaurant").removeClass("active");
+    $(".Francisco").removeClass("active");
+    $(".East").removeClass("active");
+    $(".South").removeClass("active");
+    $(".North").addClass("active");
 		$(".north-subregion").addClass("active");
 		$(".san-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".eastbay").click(function() {
+    $(".restaurant").removeClass("active");
+    $(".Francisco").removeClass("active");
+    $(".North").removeClass("active");
+    $(".South").removeClass("active");
+    $(".East").addClass("active");
 		$(".east-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".san-subregion").removeClass("active");
 		$(".south-subregion").removeClass("active");
 	});
 	$(".southbay").click(function() {
+    $(".restaurant").removeClass("active");
+    $(".Francisco").removeClass("active");
+    $(".North").removeClass("active");
+    $(".East").removeClass("active");
+    $(".South").addClass("active");
 		$(".south-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
@@ -109,6 +132,7 @@
 	$(".subregion").click(function() {
 		$(".Bernal").removeClass("active");
 		$(".Castro").removeClass("active");
+    $(".Chinatown").removeClass("active");
 		$(".Embarcadero").removeClass("active");
 		$(".Financial").removeClass("active");
 		$(".Hayes").removeClass("active");
@@ -128,6 +152,7 @@
 		$(".Napa").removeClass("active");
 		$(".Olema").removeClass("active");
 		$(".Sausalito").removeClass("active");
+    $(".Sonoma").removeClass("active");
 		$(".Helena").removeClass("active");
 		$(".Yountville").removeClass("active");
 		$(".Berkeley").removeClass("active");
@@ -149,6 +174,10 @@
 		$(".Castro").addClass("active");
 		window.location.hash = '/sf/castro';
 	});
+  $(".chinatown").click(function() {
+    $(".Chinatown").addClass("active");
+    window.location.hash = '/sf/chinatown';
+  });
 	$(".embarcadero").click(function() {
 		$(".Embarcadero").addClass("active");
 		window.location.hash = '/sf/embarcadero';
@@ -233,6 +262,10 @@
 		$(".Sausalito").addClass("active");
 		window.location.hash = '/northbay/sausalito';
 	});
+  $(".sonoma").click(function() {
+    $(".Sonoma").addClass("active");
+    window.location.hash = '/northbay/sonoma';
+  });
 	$(".sthelena").click(function() {
 		$(".Helena").addClass("active");
 		window.location.hash = '/northbay/sthelena';
