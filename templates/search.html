@@ -28,12 +28,12 @@
 
 <div id="top100" class="row small-up-2 large-up-4 restaurants">
 	{% for r in restaurants %}
-	<div class="column restaurant {{r.Cuisine}} {{r.Region}} {{r.slug}} active">
+	<div class="column restaurant {{r.Cuisine}} {{r.slug}} active">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 		<h5>{{ r.Name }}</h5>
-		
+
 			<span class="cuisine-label">{{r.Cuisine}}</span>
-		
+
 	</div>
 	{% endfor %}
 </div>
