@@ -54,13 +54,22 @@
             	   <i class="fa fa-bell"></i></p>
             {% elif restaurant.Noise == 'BOMB' %}
                 <p>Noise Level: <i class="fa fa-bomb"></i></p>
-          {% endif %}
-					<p><i class="fa fa-money"></i> {{restaurant.Prices}}</p>
-					<p><i class="fa fa-clock-o"></i> {{restaurant.Meals}}</p>
+          	{% endif %}
+
+				<p><i class="fa fa-money"></i> {{restaurant.Prices}}</p>
+				<p><i class="fa fa-clock-o"></i> {{restaurant.Meals}}</p>
 
 		    {% if restaurant.Fullreviewlink %}
 			    <p><a href="{{restaurant.Fullreviewlink}}">Full Review</a></p>
 		    {% endif %}
+
+		    {% if restaurant.OtherLocationAddress %}
+          		<p>Other Location: {{restaurant.otherlocationname}}<br>
+          			{{restaurant.OtherLocationAddress}}<br>
+          			{{restaurant.OtherLocationPhone}}<br>
+          			<a href="{{restaurant.OtherLocationWebsite}}" target="_blank">{{restaurant.OtherLocationWebsite}}</a><br>
+          		 </p>
+      		{% endif %}   		
 
   		</div>
 
