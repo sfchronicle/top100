@@ -85,6 +85,7 @@
 
 	// filtering based on region
 	$(".sf").click(function() {
+    window.location.hash = '/sf';
     $(".restaurant").removeClass("active");
     $(".North").removeClass("active");
     $(".East").removeClass("active");
@@ -96,6 +97,7 @@
 		$(".south-subregion").removeClass("active");
 	});
 	$(".northbay").click(function() {
+    window.location.hash = '/northbay';
     $(".restaurant").removeClass("active");
     $(".Francisco").removeClass("active");
     $(".East").removeClass("active");
@@ -107,6 +109,7 @@
 		$(".south-subregion").removeClass("active");
 	});
 	$(".eastbay").click(function() {
+    window.location.hash = '/eastbay';
     $(".restaurant").removeClass("active");
     $(".Francisco").removeClass("active");
     $(".North").removeClass("active");
@@ -118,6 +121,7 @@
 		$(".south-subregion").removeClass("active");
 	});
 	$(".southbay").click(function() {
+    window.location.hash = '/northbay';
     $(".restaurant").removeClass("active");
     $(".Francisco").removeClass("active");
     $(".North").removeClass("active");
