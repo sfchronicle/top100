@@ -14,21 +14,19 @@
 
 	<div class="regions">
 		<ul class="regions-block">
-		  	<li class="oneofakind button">One of a Kind</li>
-		  	<li class="greatpizza button">Great Pizza</li>
-			<li class="topburgers button">Top Burgers</li>
-			<li class="openlate button">Open Late</li>
-			<li class="exceptionalbars button">Exceptional Bars</li>
-			<li class="bestofbrunch button active">Best of Brunch</li>
-			<li class="outdoor button">Outdoor</li>
-			<li class="saturdaylunch button">Saturday Lunch</li>
-			<li class="top100classics button">Top 100 Classics</li>
-			<li class="historic button">Historic</li>
-			<li class="views button">Views</li>
-			<li class="new button">New</li>
-			<li class="privaterooms button">Private Rooms</li>
-			<li class="tastingmenus button">Tasting Menus</li>
-			<li class="fourstars button">Four Stars</li>
+		  	<a href="{{ url_for('oneofakind_view') }}"><li class="oneofakind button">One of a Kind</li></a>
+		  	<a href="{{ url_for('pizza_view') }}"><li class="greatpizza button">Great Pizza</li></a>
+			<a href="{{ url_for('burger_view') }}"><li class="topburgers button">Top Burgers</li></a>
+			<a href="{{ url_for('late_view') }}"><li class="openlate button">Open Late</li></a>
+			<a href="{{ url_for('bars_view') }}"><li class="exceptionalbars button">Exceptional Bars</li></a>
+			<a href="{{ url_for('brunch_view') }}"><li class="bestofbrunch button">Best of Brunch</li></a>
+			<a href="{{ url_for('outdoor_view') }}"><li class="outdoor button">Outdoor</li></a>
+			<a href="{{ url_for('saturdaylunch_view') }}"><li class="saturdaylunch button">Saturday Lunch</li></a>
+			<a href="{{ url_for('classics_view') }}"><li class="top100classics button">Top 100 Classics</li></a>
+			<a href="{{ url_for('historic_view') }}"><li class="historic button">Historic</li></a>
+			<a href="{{ url_for('new_view') }}"><li class="new button">New</li></a>
+			<a href="{{ url_for('private_view') }}"><li class="privaterooms button">Private Rooms</li></a>
+			<a href="{{ url_for('fourstars_view') }}"><li class="fourstars button">Four Stars</li></a>
 		</ul>
 	</div>
 

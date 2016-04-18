@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    
+    {% include 'components/hearst.html' %}
 
   </head>
   <body class="{% if config.DEBUG %}debug{% endif %}">
