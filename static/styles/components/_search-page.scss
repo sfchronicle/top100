@@ -25,3 +25,12 @@
 		margin-bottom: 0;
 	}
 }
+
+@include media (max-width 500px) {
+	.restaurant-search-container {
+		padding: 1em 0 5em;
+	}
+	.search-container {
+		padding: 1.5em;
+	}
+}

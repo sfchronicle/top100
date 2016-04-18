@@ -30,7 +30,7 @@
   <input class="input" id="input" type="text" placeholder="Try Mexican, Italian or American... ">
 </div>
 
-<div id="top100" class="row small-up-2 large-up-4 restaurants">
+<div id="top100" class="row small-up-2 large-up-4 restaurants restaurant-search-container">
 	{% for r in restaurants %}
 	<div class="column restaurant {{r.Cuisine}} {{r.slug}} active search-restaurant">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
