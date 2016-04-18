@@ -3,7 +3,7 @@
   margin-bottom: 50px;
   display: inline-block;
   width: 100%;
-  
+
   .container {
     width:100%;
     max-width:900px;
@@ -68,13 +68,13 @@
       width: 100%;
       padding: 0;
     }
-    
+
     p {
     font-size: 1em;
     font-family: georgia, serif;
     text-align: left;
     margin-top: 0;
-    
+
     }
 
     .specialties {
@@ -101,7 +101,7 @@
 }
 
 #map {
-  
+
   @include media (max-width $medium-breakpoint) {
     float: left;
     margin:0 2em 2em 0;
@@ -114,4 +114,7 @@
 
 .fotorama{
   margin-bottom: 2em;
+}
+.fotorama__arr {
+  height: 20px;
 }
