@@ -26,6 +26,10 @@ class Restaurant(db.Model):
     Specialties = db.Column(db.Text())
     Fullreviewlink = db.Column(db.Text())
     article = db.Column(db.Text())
+    TwitterText = db.Column(db.Text())
+    FacebookTitle = db.Column(db.Text())
+    FacebookDescription = db.Column(db.Text())
+    FacebookImage = db.Column(db.Text())
 
     guides = db.relationship('Guide', backref=db.backref('restaurant', lazy='joined'), lazy='dynamic')
 

@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}Regions | SF Chronicle{% endblock %}
+{% block title %}One of a Kind Guide | SF Chronicle{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants: One of a Kind{% endblock %}
 {% block channelpath %} :: Guide :: One of a Kind{% endblock %}
+
+{% block twitter_url %}{{ url_for('oneofakind_view') }}{% endblock %}
+{% block fb_url %}{{ url_for('oneofakind_view') }}{% endblock %}
+{% block fb_title %}Where to find one-of-a-kind dining{% endblock %}
+{% block page_description %}Top 100 Restaurants: Explore Michael Bauer's top picks for the most unique dining experiences in the Bay Area.{% endblock %}
+{% block fb_description %}Top 100 Restaurants: Explore Michael Bauer's top picks for the most unique dining experiences in the Bay Area.{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_onekind.jpg{% endblock %}
 
 {% block head %}
 

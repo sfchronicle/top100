@@ -49,12 +49,15 @@
     <meta name="twitter:url" content="http://projects.sfchronicle.com/2016/top-100-restaurants{% block twitter_url %}{% endblock %}">
 
     <!-- Social sharing meta -->
+    <meta name="description" content="{% block page_description %}{% endblock %}">
+    <meta property="fb:app_id" content="537896802938133"/>
     <meta property="og:type" content="article">
     <meta property="og:title" content="{% block fb_title %}{% endblock %}">
-    <meta property="og:site_name" content="The San Francisco Chronicle">
+    <meta property="og:site_name" content="San Francisco Chronicle">
     <meta property="og:url" content="http://projects.sfchronicle.com/2016/top-100-restaurants{% block fb_url %}{% endblock %}">
     <meta property="og:image" content="{% block fb_image %}{% endblock %}">
     <meta property="og:description" content="{% block fb_description %}Michael Bauer: Dining is more than sustenance — it’s pure, unadulterated joy. Explore the best of Bay Area dining, from brunch to the classics.{% endblock %}">
+
 
   </head>
   <body class="{% if config.DEBUG %}debug{% endif %}">
