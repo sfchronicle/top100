@@ -28,9 +28,21 @@
 	background: #AFAFAF;
 	text-align: center;
 
+  @include media (max-width 655px){
+    overflow:scroll;
+  }
+
 	&:active {
 		background:#AFAFAF;
 	}
+}
+
+.sf-subregion {
+  margin:0;
+  
+  @include media (max-width 655px){
+    width:655px;
+  }
 }
 
 .button-regions {

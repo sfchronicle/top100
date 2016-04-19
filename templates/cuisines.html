@@ -73,7 +73,7 @@
 <script>
   $(document).ready(function() {
     App.init();
-    $(".restaurant").addClass("active");
+    
   });
 
 	$(".cuisine").click(function() {
@@ -204,11 +204,16 @@
 	if (url.indexOf('#') > -1){
 	    hash = url.split('#')[1];
 	}
-	$(function(){
 
-		$('.'+hash).each(function(){
-			$(this).addClass('active');
-		});
+	$(function(){
+		if (!hash) {	
+			$(".restaurant").addClass("active");
+		}
+		else {
+			$('.'+hash).each(function(){
+				$(this).addClass('active');
+			});
+		}
 	});
 
 	// $(function() {
