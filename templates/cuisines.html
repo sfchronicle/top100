@@ -13,12 +13,20 @@
 {% block fb_description %}Explore the best of Bay Area dining, whether you're craving Italian, seafood or something a little more drink-centric.{% endblock %}
 
 {% block header %}
-    <h1>CUISINES</h1>
+<div id="cuisine-image" class="large-12">
+            
+    <div class="top100-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+    </div>
+
+    <div class="cuisine-title">
+    	<h1>Cuisines</h1>
+    	{% include 'components/cuisines_social.html' %}
+
+    </div>
+</div>
 {% endblock %}
 
-{% block social %}
-	{% include 'components/cuisines_social.html' %}
-{% endblock %}
 
 {% block content %}
 

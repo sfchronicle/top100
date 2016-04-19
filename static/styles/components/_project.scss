@@ -90,6 +90,10 @@ li {
     right: 0;
     padding: 10px 0 0;
 
+    @include media (max-width 670px){
+      bottom: 30px;
+    }
+
   h1 {
   	font-family:$sans-serif-light;
     text-align: center;
@@ -109,6 +113,25 @@ li {
 
   @include media (max-width 542px){
     display:none;
+  }
+}
+
+.mobile-title {
+  display:none;
+  margin-top:1em;
+
+  h1 {
+
+    font-family: "AntennaExtraLight", "Lato", "Helvetica Neue", sans-serif;
+    text-align: center;
+    margin: 1px 0 3px;
+    font-size: 1.9em;
+    font-weight: 100;
+  }
+
+  @include media (max-width 542px) {
+    display: block;
+  
   }
 }
 
@@ -146,7 +169,6 @@ li {
 
   @include media (max-width 990px) {
     background-image: url("../images/restaurant.jpg");
-    background-position: center bottom;
   }
 
   @include media (max-width $small-breakpoint) {
@@ -159,6 +181,7 @@ li {
   }
 
 }
+
 #intro-text {
   display: inline-block;
   padding: 2em 0 0;

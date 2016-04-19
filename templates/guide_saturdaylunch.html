@@ -15,7 +15,18 @@
 {% endblock %}
 
 {% block header %}
-    <h1>Saturday Lunch</h1>
+<div id="saturdaylunch" class="large-12 guides-image">
+            
+    <div class="top100-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+    </div>
+
+    <div class="cuisine-title">
+    	<h1>Saturday Lunch</h1>
+    	{% include 'components/cuisines_social.html' %}
+
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -47,7 +58,7 @@
 
 				{% for r in restaurants %}
 					{% if g.Name == r.Name %}
-				<div class="column guide">
+				<div class="column guides">
 					<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 					<h5>{{r.Name}}</h5>
 				</div>

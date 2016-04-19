@@ -14,13 +14,18 @@
 {% endblock %}
 
 {% block header %}
-    <h1>SEARCH</h1>
-{% endblock %}
+<div id="search-image" class="large-12">
+            
+    <div class="top100-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+    </div>
 
-{% block social %}
+    <div class="cuisine-title">
+    	<h1>Search</h1>
+    	{% include 'components/cuisines_social.html' %}
 
-	{% include 'components/search_social.html' %}
-
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}

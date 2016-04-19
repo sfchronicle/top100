@@ -15,6 +15,29 @@
     }
 }
 
+#search-image {
+
+  background-image: url('../images/search_wide.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include media (max-width 990px) {
+    background-image: url("../images/search.jpg");
+    min-height: 170px;
+    background-position: center;
+  }
+
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/search.jpg");
+  }
+
+  @include media (max-width 542px){
+  }
+
+}
 .search-restaurant {
 	@include media (max-width 452px) {
 		min-height: 226px;

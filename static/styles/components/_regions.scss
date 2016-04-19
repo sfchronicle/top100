@@ -68,3 +68,66 @@
 .subregion-active {
 	background: #fff !important;
 }
+
+.region-title {
+
+    bottom: 50px;
+    position: absolute;
+    max-width: 520px;
+    background: rgba(250, 249, 244, 0.88);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: 10px 0 0;
+
+    @include media (max-width 670px){
+      bottom: 30px;
+    }
+
+  h1 {
+    font-family:$sans-serif-light;
+    text-align: center;
+    margin: 1px 0 3px;;
+    font-size: 2.5em;
+    font-weight: 100;
+
+    @include media(max-width $medium-breakpoint) {
+      font-size:1.9em;
+    }
+
+    @include media(max-width $small-breakpoint) {
+      font-size:1.5em;
+    }
+
+  }
+
+  @include media (max-width 542px){
+    width: 80%;
+    padding-bottom: 5px;
+  }
+}
+
+#region-image {
+
+  background-image: url('../images/region_wide.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include media (max-width 990px) {
+    background-image: url("../images/region.jpg");
+    min-height: 170px;
+    background-position: center;
+  }
+
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/region_wide.jpg");
+  }
+
+  @include media (max-width 542px){
+  }
+
+}

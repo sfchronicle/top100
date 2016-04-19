@@ -8,27 +8,47 @@
 
 {% endblock %}
 
-{% block topimage %}
-
-
-{% endblock %}
-
 {% block header %}
-	<a class="logo" href="http://www.sfchronicle.com">
-        <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
-    </a>
-    <h1>TOP 100 RESTAURANTS</h1>
+<div id="top-image" class="large-12">
+            
+    <div class="top100-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+    </div>
+
+    <div class="title">
+    	<a class="logo" href="http://www.sfchronicle.com">
+			<img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
+    	</a>
+    	<h1>TOP 100 RESTAURANTS</h1>
+    	{%include 'components/social_links.html'%}
+
+    </div>
+</div>
 {% endblock %}
 
-{% block social %}
-
-	{% include 'components/social_links.html' %}
-
-{% endblock %}
 
 {% block content %}
 
-	
+	<div class="mobile-title">
+            
+		<a class="logo" href="http://www.sfchronicle.com">
+	        <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png">
+	    </a>
+	    <h1>TOP 100 RESTAURANTS</h1>
+
+		<div id="social">
+	    	<a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//sfchron.cl/Top100&amp;text=Top 100 Restaurants 2016%20&amp;hashtags=Top100">
+	    	   <i class="fa fa-twitter"></i>
+	    	</a>
+	    	<a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Fliving-with-aids', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+			      <i class="fa fa-facebook"></i>
+	    	</a>
+	      	<a id="mail-icon">
+	      		<i class="fa fa-envelope" aria-hidden="true"></i>
+	      	</a>
+		</div>
+    </div>
+
 	<div id="intro-text">
 		<div class="large-6 large-offset-3 column">
 			<p>The Bay Area loves to eat. Our lust — and respect — for food are centuries old.</p>

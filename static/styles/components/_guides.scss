@@ -24,3 +24,190 @@
     }
   }
 }
+
+#guide-image {
+
+  background-image: url('../images/guide_wide.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+    min-height: 170px;
+    background-position: center;
+  }
+
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+
+  @include media (max-width 542px){
+  }
+
+}
+
+.guides {
+  margin-bottom: 2em;
+}
+
+
+.guides-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include media (max-width 990px) {
+    min-height: 170px;
+    background-position: center;
+  }
+}
+
+ 
+#bars {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#brunch {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#classics {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#fourstars {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#greatpizza {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#historic {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#new {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#oneofakind {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#openlate {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#outdoor {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#privaterooms {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#saturdaylunch {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+
+#topburgers {
+  background-image: url('../images/guide_wide.jpg');
+
+  @include media (max-width 990px) {
+    background-image: url("../images/guide.jpg");
+  }
+  @include media (max-width $small-breakpoint) {
+    background-image: url("../images/guide_wide.jpg");
+  }
+}
+

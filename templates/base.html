@@ -64,20 +64,7 @@
     <main>
 
     <header>
-        <div id="top-image" class="large-12">
-            
-          {% block topimage %}{% endblock %}
-            <div class="top100-logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" />
-            </div>
-        
-
-            <div class="title">
-                {% block header %} {% endblock %}
-                {% block social %}{% endblock %}
-            </div>
-        </div>
-
+        {% block header %} {% endblock %}
         {%include 'components/nav.html' %}
     </header>
 
