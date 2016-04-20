@@ -1,23 +1,15 @@
 #cuisine-image {
 
-  background-image: url('../images/cuisine_wide.jpg');
+  background-image: url('http://ww3.hdnux.com/photos/44/52/10/7825731/3/1900x0.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   min-height: 280px;
   overflow: hidden;
+  background-position: center;
 
   @include media (max-width 990px) {
-    background-image: url("../images/cuisine.jpg");
     min-height: 170px;
-    background-position: center;
-  }
-
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/cuisine_wide.jpg");
-  }
-
-  @include media (max-width 542px){
   }
 
 }

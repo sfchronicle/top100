@@ -69,146 +69,68 @@
 
  
 #bars {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9609299/3/1900x0.jpg');
+  background-position:center;
 }
 
 #brunch {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9608103/3/1900x0.jpg');
+  background-position:center;
 }
 
 #classics {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9613772/3/1900x0.jpg');
+  background-position:center 40%;
 }
 
 #fourstars {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9608254/3/1900x0.jpg');
+  background-position:center 30%;
 }
 
 #greatpizza {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9609208/3/1900x0.jpg');
+  background-position:center;
 }
 
 #historic {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9613741/3/1900x0.jpg');
+  background-position:center;
 }
 
 #new {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9712075/3/1900x0.jpg');
+  background-position:center;
 }
 
 #oneofakind {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9609183/3/1900x0.jpg');
+  background-position:center;
 }
 
 #openlate {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9613943/3/1900x0.jpg');
+  background-position:center 65%;
 }
 
 #outdoor {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9610453/3/1900x0.jpg');
+  background-position:center;
 }
 
 #privaterooms {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9608253/3/1900x0.jpg');
+  background-position:center;
 }
 
 #saturdaylunch {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9609389/3/1900x0.jpg');
+  background-position:center 30%;
 }
 
 #topburgers {
-  background-image: url('../images/guide_wide.jpg');
-
-  @include media (max-width 990px) {
-    background-image: url("../images/guide.jpg");
-  }
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/guide_wide.jpg");
-  }
+  background-image: url('http://ww4.hdnux.com/photos/44/45/53/9608714/3/1900x0.jpg');
+  background-position:center 80%;
 }
 
 .guide-list {
