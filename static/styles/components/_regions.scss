@@ -1,27 +1,25 @@
 .regions {
 	background: #EBEBEB;
 	text-align: center;
-  @include media (max-width 360px){
-    overflow:scroll;
-  }
 }
 
 .regions-block {
-  @include media (max-width 360px){
-    width: 360px;
-  }
+  
+
 }
 
 .regions-block .button {
 
   @include media (max-width 780px){
-    padding: 8px;
+    padding: 6px;
+    font-size: 13px;
   }
 }
 .subregions-block .button-regions {
 
   @include media (max-width 780px){
-    padding: 8px;
+    padding: 6px;
+    font-size:13px;
   }
 }
 .subregions {
@@ -41,7 +39,7 @@
   margin:0;
   
   @include media (max-width 655px){
-    width:655px;
+    width:530px;
   }
 }
 
@@ -87,11 +85,11 @@
     position: absolute;
     max-width: 520px;
     background: rgba(250, 249, 244, 0.88);
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    width: 100%;
     left: 0;
     right: 0;
-    padding: 10px 0 0;
+    padding: 10px 0;
 
     @include media (max-width 670px){
       bottom: 30px;
@@ -122,24 +120,16 @@
 
 #region-image {
 
-  background-image: url('../images/region_wide.jpg');
+  background-image: url('http://ww4.hdnux.com/photos/45/32/00/9805875/3/2200x0.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position:center;
   width: 100%;
   min-height: 280px;
   overflow: hidden;
 
   @include media (max-width 990px) {
-    background-image: url("../images/region.jpg");
     min-height: 170px;
-    background-position: center;
-  }
-
-  @include media (max-width $small-breakpoint) {
-    background-image: url("../images/region_wide.jpg");
-  }
-
-  @include media (max-width 542px){
   }
 
 }
