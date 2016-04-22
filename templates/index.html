@@ -10,13 +10,13 @@
 
 {% block header %}
 <div id="top-image" class="large-12">
-            
+
     <div class="top100-logo">
         <img src="{{ url_for('static', filename='images/logo.png') }}" />
     </div>
 
     <div class="title">
-    	<a class="logo" href="http://www.sfchronicle.com">
+    	<a class="logo" href="http://www.sfchronicle.com" target="_blank">
 			<img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png" />
     	</a>
     	<h1>TOP 100 RESTAURANTS</h1>
@@ -30,7 +30,7 @@
 {% block content %}
 
 	<div class="mobile-title">
-            
+
 		<a class="logo" href="http://www.sfchronicle.com">
 	        <img src="http://www.sfchronicle.com/img/modules/siteheader/logos/logo_home_large_2x.png">
 	    </a>
@@ -55,10 +55,10 @@
 			<p>Are you trying to find the perfect pizza with that crisp blistered crust? Check out the list. Need a special-occasion meal that you will remember for the rest of your life? I have several to consider. Or are you just looking for a beautifully executed dining experience? You’ll find 100 here, and all of them have been visited a minimum of three times.</p>
 			<p>Whether you go to 1, 10 or 100, I’m interested to learn about your experiences. You can reach me at <a href="mailto:mbauer@sfchronicle.com?subject=Top 100 Restaurants">mbauer@sfchronicle.com</a>. Let’s hope you have 100 or more great experiences this year. I know I did.
 			</p>
-			<cite>Michael Bauer</cite>	
-			<hr>	
+			<cite>Michael Bauer</cite>
+			<hr>
 		</div>
-		
+
 	</div>
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants intro">
 		{% for r in restaurants %}
