@@ -16,7 +16,7 @@
 
 {% block header %}
 <div id="region-image" class="large-12">
-            
+
     <div class="top100-logo">
         <img src="{{ url_for('static', filename='images/logo.png') }}" />
     </div>
@@ -81,7 +81,7 @@
 
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
 		{% for r in restaurants %}
-		<div class="columns restaurant {{r.Region}} {{r.SubRegion}} {{r.SubRegion|lower}}">
+		<div class="columns restaurant {{r.Region|replace(" ","")}} {{r.SubRegion}} {{r.SubRegion|lower}}">
 			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
 			<h5>{{ r.Name }}</h5>
 		</div>
@@ -103,10 +103,11 @@
 	$(".sf").click(function() {
     window.location.hash = '/sf';
     $(".restaurant").removeClass("active");
-    $(".North").removeClass("active");
-    $(".East").removeClass("active");
-    $(".South").removeClass("active");
-    $(".Francisco").addClass("active");
+    $(".NorthBay").removeClass("active");
+    $(".EastBay").removeClass("active");
+    $(".SouthBay").removeClass("active");
+    $(".SanFrancisco").addClass("active");
+    $(".SanFranciscoEastBay").addClass("active");
 		$(".san-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
@@ -115,10 +116,11 @@
 	$(".northbay").click(function() {
     window.location.hash = '/northbay';
     $(".restaurant").removeClass("active");
-    $(".Francisco").removeClass("active");
-    $(".East").removeClass("active");
-    $(".South").removeClass("active");
-    $(".North").addClass("active");
+    $(".SanFrancisco").removeClass("active");
+    $(".SanFranciscoEastBay").removeClass("active");
+    $(".EastBay").removeClass("active");
+    $(".SouthBay").removeClass("active");
+    $(".NorthBay").addClass("active");
 		$(".north-subregion").addClass("active");
 		$(".san-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
@@ -127,10 +129,11 @@
 	$(".eastbay").click(function() {
     window.location.hash = '/eastbay';
     $(".restaurant").removeClass("active");
-    $(".Francisco").removeClass("active");
-    $(".North").removeClass("active");
-    $(".South").removeClass("active");
-    $(".East").addClass("active");
+    $(".SanFrancisco").removeClass("active");
+    $(".NorthBay").removeClass("active");
+    $(".SouthBay").removeClass("active");
+    $(".EastBay").addClass("active");
+    $(".SanFranciscoEastBay").addClass("active");
 		$(".east-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".san-subregion").removeClass("active");
@@ -139,10 +142,11 @@
 	$(".southbay").click(function() {
     window.location.hash = '/southbay';
     $(".restaurant").removeClass("active");
-    $(".Francisco").removeClass("active");
-    $(".North").removeClass("active");
-    $(".East").removeClass("active");
-    $(".South").addClass("active");
+    $(".SanFrancisco").removeClass("active");
+    $(".SanFranciscoEastBay").removeClass("active");
+    $(".NorthBay").removeClass("active");
+    $(".EastBay").removeClass("active");
+    $(".SouthBay").addClass("active");
 		$(".south-subregion").addClass("active");
 		$(".north-subregion").removeClass("active");
 		$(".east-subregion").removeClass("active");
@@ -161,7 +165,7 @@
 		$(".Noe").removeClass("active");
 		$(".Beach").removeClass("active");
 		$(".Presidio").removeClass("active");
-		$(".Heights").removeClass("active");
+		$(".Pacific").removeClass("active");
 		$(".Russian").removeClass("active");
 		$(".SoMa").removeClass("active");
 		$(".Tenderloin").removeClass("active");
@@ -232,7 +236,7 @@
 		window.location.hash = '/sf/presidio';
 	});
 	$(".pacificheights").click(function() {
-		$(".Heights").addClass("active");
+		$(".Pacific").addClass("active");
 		window.location.hash = '/sf/pacificheights';
 	});
 	$(".russianhill").click(function() {
