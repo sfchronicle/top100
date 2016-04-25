@@ -37,7 +37,7 @@
 	    <h1>TOP 100 RESTAURANTS</h1>
 
 		<div id="social">
-	    	<a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//sfchronicle.com/Top100restaurants&amp;text=Explore the best of the Bay Area’s dining scene.%20&amp;hashtags=Top100Restaurants">
+	    	<a id="twitter-icon" class="mobile-twitter" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//sfchronicle.com/Top100restaurants&amp;text=Explore%20the%20best%20of%20the%20Bay%20Area%27s%20dining%20scene.%20&amp;hashtags=Top100Restaurants">
 	    	   <i class="fa fa-twitter"></i>
 	    	</a>
 	    	<a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Ftop-100-restaurants%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;">
@@ -63,8 +63,8 @@
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants intro">
 		{% for r in restaurants %}
 		<div class="column restaurant-index">
-			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
-			<h5>{{ r.Name }}</h5>
+			<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}">
+			<h5>{{ r.Name }}</h5></a>
 		</div>
 		{% endfor %}
 	</div>

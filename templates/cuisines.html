@@ -15,10 +15,12 @@
 
 {% block header %}
 <div id="cuisine-image" class="large-12">
-            
-    <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
-    </div>
+        
+    <a href="/">        
+	    <div class="top100-logo">
+	        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	    </div>
+	</a>
 
     <div class="cuisine-title">
     	<h1>Cuisines</h1>
@@ -62,8 +64,9 @@
 	<div class="columns restaurant {{ r.Cuisine }} {{ r.Cuisine|lower }} {{r.Name}}">
 		<a href="{{ url_for('restaurant_view', slug=r.slug) }}">
 			<img class="thumbnail" src="{{r.thumbnail}}" />
+		
+			<h5>{{ r.Name }}</h5>
 		</a>
-		<h5>{{ r.Name }}</h5>
 	</div>
 	{% endfor %}
 </div>

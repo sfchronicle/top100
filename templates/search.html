@@ -16,9 +16,11 @@
 {% block header %}
 <div id="search-image" class="large-12">
 
-    <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
-    </div>
+    <a href="/">
+	    <div class="top100-logo">
+	        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	    </div>
+	   </a>
 
     <div class="cuisine-title">
     	<h1>Search</h1>
@@ -38,11 +40,10 @@
 <div id="top100" class="row small-up-2 large-up-4 restaurants restaurant-search-container">
 	{% for r in restaurants %}
 	<div class="column restaurant {{r.Cuisine|replace(" ","")}} {{r.slug|replace("-","")}} active search-restaurant">
-		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}"></a>
-		<h5>{{ r.Name }}</h5>
-
+		<a href="{{ url_for('restaurant_view', slug=r.slug) }}"><img class="thumbnail" src="{{r.thumbnail}}">
+			<h5>{{ r.Name }}</h5>
 			<span class="cuisine-label">{{r.Cuisine}}</span>
-
+		</a>
 	</div>
 	{% endfor %}
 </div>
