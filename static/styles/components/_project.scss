@@ -228,6 +228,9 @@ li {
 }
 
 #top100 {
+  a{
+    color:#333;
+  }
 
   @include media (max-width $small-breakpoint) {
     h5{
@@ -256,3 +259,4 @@ li {
     display: none;
   }
 }
+
