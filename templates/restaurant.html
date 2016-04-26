@@ -60,7 +60,7 @@
 				</iframe>
 			</div><br>
 
-		    <p><i class="fa fa-link"> </i> <a href="{{restaurant.Website}}">{{restaurant.Website}}</a></p>
+		    <p>{% if restaurant.Website %}<i class="fa fa-link"> </i> <a href="{{restaurant.Website}}">{{restaurant.Website}}</a></p>{% endif %}
 		    <p><i class="fa fa-phone"></i> {{restaurant.Phone}}</p>
 		    {% if restaurant.Noise == 'ONE BELL' %}
                 <p>Noise Level: <i class="fa fa-bell"></i></p>
