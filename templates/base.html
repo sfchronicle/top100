@@ -8,12 +8,12 @@
     {% block meta %}{% endblock %}
     <link rel="icon" href="http://www.sfchronicle.com/favicon.ico?v=2">
     {% block head %}{% endblock %}
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    
+
     <!-- Begin Hearst analytics -->
     <script type="text/javascript">
         var omni_channelPath = "Food :: Top 100 Restaurants 2016{% block channelpath %}{% endblock %}";
@@ -83,7 +83,7 @@
                 <br>
                 <p>Written by Michael Bauer<br>
                   Edited by Kitty Morgan & Paolo Lucchesi<br>
-                  Images by SF Chronicle Photographers<br>
+                  Images by John Storey & Randi Lynn Beach & Liz Hafalia & Eric Risberg & Brant Ward & Craig Lee & Carlos Avila Gonzalez & Amy Osborne & Michael Short & Kirsten Aguilar & Alex Washburn & Jason Henry & Russell Yip & John Lee & Laura Morton & Preston Gannaway & Mike Kepka & Brian A. Pounds & Noah Berger & Bloomberg & Paul Chinn & Mike Kepka<br>
                   Web development by Emma O'Neill & Lucio Villa<br>
                   Design by Lucio Villa
                 </p>
@@ -91,7 +91,7 @@
 
         </div>
     </footer>
-    
+
     {% assets filters="uglifyjs", output="scripts/vendor.%(version)s.js",
               "bower_components/jquery/dist/jquery.min.js",
               "bower_components/foundation-sites/js/foundation.core.js",
@@ -118,7 +118,7 @@
         + 'script>')</script>
     {% endif %}
 
-    
+
 
 </main>
 
