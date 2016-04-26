@@ -160,20 +160,19 @@ li {
 
 #top-image {
 
-  background-image: url('../images/restaurant_wide.jpg');
+  background-image: url('http://ww2.hdnux.com/photos/44/52/20/9634585/3/1900x0.jpg');
+  background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   min-height: 280px;
   overflow: hidden;
 
-  @include media (max-width 990px) {
-    background-image: url("../images/restaurant.jpg");
-  }
+
+
 
   @include media (max-width $small-breakpoint) {
     min-height: 210px;
-    background-image: url("../images/restaurant_wide.jpg");
   }
 
   @include media (max-width 542px){
@@ -208,7 +207,7 @@ li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+    padding: 0.88889rem 2rem 0.94444rem;
     background-color: #EBEBEB;
     color: #333;
     transition: background-color 300ms ease-out;

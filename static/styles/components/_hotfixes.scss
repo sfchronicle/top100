@@ -24,3 +24,11 @@
 .mobile-title a:hover{
 	color: #696969 !important;
 }
+
+.northbay.button{
+	width: 129px;
+
+	@include media(max-width 760px){
+		width:72px;
+	}
+}
