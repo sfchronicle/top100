@@ -10,7 +10,7 @@
 {% block fb_title %}Where to find late-night fine dining{% endblock %}
 {% block page_description %}Top 100 Restaurants: Michael Bauer shares his top picks on where to dine in the Bay Area, well past the dinner hour.{% endblock %}
 {% block fb_description %}Top 100 Restaurants: Michael Bauer shares his top picks on where to dine in the Bay Area, well past the dinner hour.{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_openlate.jpg{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_openlate.jpg{% endblock %}
 
 {% block head %}
 
@@ -20,7 +20,7 @@
 <div id="openlate" class="large-12 guides-image">
             
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="cuisine-title">
@@ -75,6 +75,8 @@
 		{% endfor %}
 
 	</div>
+
+	{%include 'components/_footer-wide.html'%}
 
 
 {% endblock %}

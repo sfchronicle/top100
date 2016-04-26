@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{restaurant.Name}} | SF Chronicle{% endblock %}
+{% block title %}Top 100 Restaurants: {{restaurant.Name}}{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants: {{restaurant.Name|safe}}{% endblock %}
 {% block hearst_class %}article{% endblock %}
@@ -17,7 +17,7 @@
 {% block header %}
 <div class="article-logo">
 	<a href="{{ url_for ('index') }}">
-	    <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	    <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </a>
 </div>
 {% endblock %}
@@ -29,17 +29,17 @@
 
 	<div class="rest-img">
 		<h1>{{restaurant.Name}}</h1>
-		<div id="social">
+		<div id="social" class="restaurant-page">
 			<a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//projects.sfchronicle.com/2016/top-100-restaurants/{{restaurant.slug}}/&amp;text={{restaurant.TwitterText|urlencode}}%20&amp;hashtags=Top100Restaurants">
 				<i class="fa fa-twitter"></i>
 			</a>
 			<a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Ftop-100-restaurants%2F{{restaurant.slug}}%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;">
 				<i class="fa fa-facebook"></i>
 			</a>
-			<a id="mail-icon" href="mailto:?subject=Top 100 Bay Area Restaurants 2016 – A curated guide by the San Francisco Chronicle.&body=http://sfchronicle.com/Top100restaurants">
+			<a id="mail-icon" href="mailto:?subject={{restaurant.TwitterText|urlencode}}&body=http%3A//projects.sfchronicle.com/2016/top-100-restaurants/{{restaurant.slug}}/">
 				<i class="fa fa-envelope" aria-hidden="true"></i>
 			</a>
-		</div><br><br>
+		</div><br>
 
 	    <div class="fotorama" data-width="100%" data-arrows="always" data-nav="false">
 	    	<img src="{{restaurant.photo1}}" alt="" />
@@ -80,7 +80,7 @@
                 <p>Noise Level: <i class="fa fa-bomb"></i></p>
           	{% endif %}
 
-				<p><i class="fa fa-money"></i> {{restaurant.Prices}}</p>
+				<p>{{restaurant.Prices}}</p>
 				<p><i class="fa fa-clock-o"></i> {{restaurant.Meals}}</p>
 
 		    {% if restaurant.Fullreviewlink %}
@@ -106,6 +106,7 @@
 
 </div>
 </div>
+{%include 'components/_footer.html'%}
 
 {% endblock %}
 

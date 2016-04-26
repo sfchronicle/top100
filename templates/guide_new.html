@@ -8,7 +8,7 @@
 {% block twitter_url %}{{ url_for('new_view') }}{% endblock %}
 {% block fb_title %}Where to find Top 100 newcomers{% endblock %}
 {% block fb_url %}{{ url_for('new_view') }}{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_new.jpg{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_new.jpg{% endblock %}
 {% block fb_description %}Top 100 Restaurants: Discover the newcomers to Michael Bauer's best of Bay Area of dining list.{% endblock %}
 
 {% block head %}
@@ -19,7 +19,7 @@
 <div id="new" class="large-12 guides-image">
             
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="cuisine-title">
@@ -75,7 +75,8 @@
 
 	</div>
 
-
+	{%include 'components/_footer-wide.html'%}
+	
 {% endblock %}
 
 {% block javascript %}

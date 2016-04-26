@@ -8,7 +8,7 @@
 {% block twitter_url %}/classics/{% endblock %}
 {% block fb_title %}Where to find Top 100 classics{% endblock %}
 {% block fb_url %}/classics/{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_classics.jpg{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_classics.jpg{% endblock %}
 {% block fb_description %}Top 100 Restaurants: Explore the Bay Area stars that have made Michael Bauer's list for more than 20 years.{% endblock %}
 
 {% block head %}
@@ -19,7 +19,7 @@
 <div id="classics" class="large-12 guides-image">
             
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="cuisine-title">
@@ -75,6 +75,7 @@
 
 	</div>
 
+	{%include 'components/_footer-wide.html'%}
 
 {% endblock %}
 

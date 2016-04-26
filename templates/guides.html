@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Guides | SF Chronicle{% endblock %}
+{% block title %}Top 100 Restaurants | Curated Guides{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants: Guides{% endblock %}
 {% block channelpath %} :: Guides{% endblock %}
@@ -9,6 +9,7 @@
 {% block fb_url %}{{ url_for('guides_view') }}{% endblock %}
 {% block fb_title %}Top 100 Restaurants | By Curated guides{% endblock %}
 {% block fb_description %}Explore Michael Bauer's top choices for just about every occasion, whether you're seeking a one-of-a-kind experience or want to stick to the classics.{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100main_guides.jpg{% endblock %}
 
 {% block head %}
 
@@ -19,7 +20,7 @@
         
     <a href="/">        
 	    <div class="top100-logo">
-	        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
 	    </div>
 	</a>
 
@@ -106,6 +107,7 @@
 
 	</div>
 
+	{%include 'components/_footer-wide.html'%}
 
 {% endblock %}
 

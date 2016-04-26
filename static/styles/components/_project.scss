@@ -259,3 +259,20 @@ li {
   }
 }
 
+.credits{
+    max-width: 660px;
+    margin: 6px auto;
+    text-align: center;
+
+    @include media(max-width $sm-md-breakpoint){
+      margin:1em 0;
+      text-align:left;
+    }
+
+}
+
+.footer-logo{
+  padding-left: 44px;
+
+}
+

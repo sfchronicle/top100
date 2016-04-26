@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Regions | SF Chronicle{% endblock %}
+{% block title %}Top 100 Restaurants | By Region{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants: Regions{% endblock %}
 {% block channelpath %} :: Regions{% endblock %}
@@ -9,6 +9,7 @@
 {% block fb_url %}{{ url_for('regions_view') }}{% endblock %}
 {% block fb_title %}Top 100 Restaurants | By region{% endblock %}
 {% block fb_description %}Explore the best of Bay Area dining, from right in your own neighborhood to across the bay.{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100main_regions.jpg{% endblock %}
 
 {% block head %}
 
@@ -19,7 +20,7 @@
 
     <a href="/">
 	    <div class="top100-logo">
-	        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
 	    </div>
 	</a>
 	
@@ -90,6 +91,8 @@
 		</div>
 		{% endfor %}
 	</div>
+
+	{%include 'components/_footer-wide.html'%}
 
 
 {% endblock %}

@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}Top 100 Restaurants | SF Chronicle{% endblock %}
+{% block title %}Top 100 Bay Area Restaurants 2016{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants{% endblock %}
 
-{% block head %}
-
-{% endblock %}
-
+{% block head %}{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100main.jpg{% endblock %}
+{% block fb_title %}Top 100 Bay Area Restaurants 2016{% endblock %}
 {% block header %}
 <div id="top-image" class="large-12">
 
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="title">
@@ -53,9 +52,10 @@
 		<div class="large-6 large-offset-3 column">
 			<p><span>100.</span> That seems like a lot of restaurants, but in San Francisco that number barely covers the creme de la creme. No other area of the country has a more dynamic scene, and it keeps getting better. The proof is in this 21st edition of the Top 100 Restaurants.</p>
 			<p>Are you trying to find the perfect pizza with that crisp blistered crust? Check out the list. Need a special-occasion meal that you will remember for the rest of your life? I have several to consider. Or are you just looking for a beautifully executed dining experience? You’ll find 100 here, and all of them have been visited a minimum of three times.</p>
-			<p>Whether you go to 1, 10 or 100, I’m interested to learn about your experiences. You can reach me at <a href="mailto:mbauer@sfchronicle.com?subject=Top 100 Restaurants">mbauer@sfchronicle.com</a>. Let’s hope you have 100 or more great experiences this year. I know I did.
+			<p>Whether you go to 1, 10 or 100, I’m interested to learn about your experiences. You can reach me at <a href="mailto:mbauer@sfchronicle.com?subject=Top%20100%20Restaurants">mbauer@sfchronicle.com</a>. Let’s hope you have 100 or more great experiences this year. I know I did.
 			</p>
 			<cite>Michael Bauer</cite>
+			<div class="sf-callout"><p><a href="http://www.sfchronicle.com/ultimate_access/?ipid=top100restaurants/" target="_blank">Subscribe to The San Francisco Chronicle</p></a></div>
 			<hr>
 		</div>
 
@@ -69,6 +69,7 @@
 		{% endfor %}
 	</div>
 
+	{%include 'components/_footer-wide.html'%}
 
 {% endblock %}
 

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Search | SF Chronicle{% endblock %}
+{% block title %}Search the 2016 Top 100 Restaurants{% endblock %}
 
 {% block hearst_title %}Top 100 Restaurants: Search{% endblock %}
 {% block channelpath %} :: Search{% endblock %}
@@ -8,6 +8,7 @@
 {% block twitter_url %}{{ url_for('search_view') }}{% endblock %}
 {% block fb_url %}{{ url_for('search_view') }}{% endblock %}
 {% block fb_title %}Top 100 Restaurants | Search{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100main_search.jpg{% endblock %}
 
 {% block head %}
 
@@ -18,7 +19,7 @@
 
     <a href="/">
 	    <div class="top100-logo">
-	        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+	        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
 	    </div>
 	   </a>
 
@@ -48,7 +49,7 @@
 	{% endfor %}
 </div>
 
-
+{%include 'components/_footer-wide.html'%}
 {% endblock %}
 
 {% block javascript %}

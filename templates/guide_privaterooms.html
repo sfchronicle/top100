@@ -10,7 +10,7 @@
 {% block fb_title %}Where to find fine dining with private rooms{% endblock %}
 {% block page_description %}Top 100 Restaurants: Michael Bauer shares his top picks for intimate dining experiences in the Bay Area.{% endblock %}
 {% block fb_description %}Top 100 Restaurants: Michael Bauer shares his top picks for intimate dining experiences in the Bay Area.{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_private.jpg{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_private.jpg{% endblock %}
 
 {% block head %}
 
@@ -20,7 +20,7 @@
 <div id="privaterooms" class="large-12 guides-image">
             
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="cuisine-title">
@@ -75,6 +75,8 @@
 		{% endfor %}
 
 	</div>
+
+	{%include 'components/_footer-wide.html'%}
 
 
 {% endblock %}

@@ -7,7 +7,7 @@
   .container {
     width:100%;
     max-width:900px;
-    margin:2em auto 4em;
+    margin:1em auto 0;
   }
 
   .rest-img {
@@ -120,7 +120,7 @@
 }
 
 .article-logo {
-    max-width: 120px;
+    max-width: 102px;
     width: 100%;
     margin: 0 0 0 2%;
     position: absolute;
@@ -131,4 +131,8 @@
 
   }
   
+}
+
+.restaurant-page a:hover{
+  color: #696969 !important;
 }

@@ -32,3 +32,15 @@
 		width:72px;
 	}
 }
+
+.sf-callout{
+	text-align:center;
+
+	a{
+		color: #E3474F;
+
+		&:hover{
+		text-decoration: underline;
+		}
+	}
+}

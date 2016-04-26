@@ -9,7 +9,7 @@
 {% block fb_url %}{{ url_for('historic_view') }}{% endblock %}
 {% block fb_title %}Guide to historic dining institutions{% endblock %}
 {% block fb_description %}Top 100 Restaurants: Michael Bauer shares his top picks for Bay Area restaurants that are more than 50 years old.{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top100-restaurants/social/top100guide_historic.jpg{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_historic.jpg{% endblock %}
 
 {% block head %}
 
@@ -19,7 +19,7 @@
 <div id="historic" class="large-12 guides-image">
             
     <div class="top100-logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" />
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
     </div>
 
     <div class="cuisine-title">
@@ -74,6 +74,8 @@
 		{% endfor %}
 
 	</div>
+
+	{%include 'components/_footer-wide.html'%}
 
 
 {% endblock %}

@@ -20,7 +20,7 @@
         var omni_title = "{% block hearst_title %}{% endblock %}";
         var omni_className = "{% block hearst_class %}channel{% endblock %}";
         var omni_publicationDate = "2016-04-27 00:00:00";
-        var omni_authorName = "{% block author %}Lucio Villa, Michael Bauer, Emma O'Neill, Kristen Go, Russell Yipp {% endblock %}";
+        var omni_authorName = "{% block author %}Michael Bauer, Kitty Morgan, Paolo Lucchesi, Lucio Villa, Emma O'Neill, Russell Yipp, Kristen Go {% endblock %}";
         var omni_authorTitle = "San Francisco Chronicle staff";
     </script>
     <!-- Hearst analytics: Ensighten -->
@@ -72,25 +72,6 @@
     </header>
 
     {% block content %}{% endblock %}
-
-    <footer class="callout large secondary">
-        <div class="row">
-            <div class="large-12 columns" style="position:relative;">
-                <div class="top100-logo">
-                  <img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 250px;"/>
-                </div>
-                <div class="scroll-to"><a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i><br>Scroll to top</a></div>
-                <br>
-                <p>Written by Michael Bauer<br>
-                  Edited by Kitty Morgan & Paolo Lucchesi<br>
-                  Images by John Storey & Randi Lynn Beach & Liz Hafalia & Eric Risberg & Brant Ward & Craig Lee & Carlos Avila Gonzalez & Amy Osborne & Michael Short & Kirsten Aguilar & Alex Washburn & Jason Henry & Russell Yip & John Lee & Laura Morton & Preston Gannaway & Mike Kepka & Brian A. Pounds & Noah Berger & Bloomberg & Paul Chinn & Mike Kepka<br>
-                  Web development by Emma O'Neill & Lucio Villa<br>
-                  Design by Lucio Villa
-                </p>
-            </div>
-
-        </div>
-    </footer>
 
     {% assets filters="uglifyjs", output="scripts/vendor.%(version)s.js",
               "bower_components/jquery/dist/jquery.min.js",
