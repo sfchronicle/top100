@@ -1,26 +1,24 @@
 .guide {
+
+  position:relative;
+
   h5{
-    margin-top: -270px;
-    margin-bottom: 200px;
-    color:white;
-    text-align:center;
-    font-size: 40px !important;
-    text-shadow: 0 2px 0 black;
-    font-weight: 600;
+    position: absolute;
+    font-size: 40px;
+    bottom: 14px;
+    color: #333;
+    left: 15px;
+    background: rgba(238, 233, 227, 0.86);
+    font-weight: 100;
+    font-family: "AntennaExtraLight", "Lato", "Helvetica Neue", sans-serif;
+    padding: 8px;
+
     @include media (max-width 900px) {
-      margin-top: -100px;
-      margin-bottom: 50px;
       font-size: 30px !important;
+      left:10;
     }
-    @include media (max-width 600px) {//600px) {
-      margin-top: -150px;
-      margin-bottom: 100px;
-      font-size: 25px !important; //20px !important;
-    }
-    @include media (max-width 500px) {
-      margin-top: -100px;
-      margin-bottom: 50px;
-      font-size: 15px !important;
+    @include media (max-width 600px) {
+      font-size: 25px !important; 
     }
   }
 }
