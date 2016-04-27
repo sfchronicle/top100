@@ -38,7 +38,7 @@
 	    <h1>TOP 100 RESTAURANTS</h1>
 
 		<div id="social">
-	    	<a id="twitter-icon" class="mobile-twitter" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//sfchronicle.com/Top100restaurants&text=Explore%20the%20best%20of%20the%20Bay%20Area%27s%20dining%20scene.%20&hashtags=Top100Restaurants">
+	    	<a id="twitter-icon" title="Share on Twitter" onclick="tweet()">
 	    	   <i class="fa fa-twitter"></i>
 	    	</a>
 	    	<a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Ftop-100-restaurants%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;">
@@ -80,5 +80,12 @@
   $(document).ready(function() {
     App.init();
   });
+</script>
+
+<script>
+function tweet() {
+    window.open('https://twitter.com/share?url='+'http://www.sfchronicle.com/top100restaurants'+'&text='+ "Explore%20the%20best%20of%20the%20Bay%20Area%27s%20dining%20scene."+'&hashtags='+'Top100restaurants', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    return false; 
+}
 </script>
 {% endblock %}
