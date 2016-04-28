@@ -15,7 +15,7 @@
 
     @include media (max-width 900px) {
       font-size: 30px !important;
-      left:10;
+      left:10px;
     }
     @include media (max-width 600px) {
       font-size: 25px !important; 
