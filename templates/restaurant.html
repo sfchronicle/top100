@@ -30,6 +30,7 @@
 	<div class="rest-img">
 		<h1>{{restaurant.Name}}</h1>
 		<div id="social" class="restaurant-page">
+
 			<a id="twitter-icon" title="Share on Twitter" onclick="tweet()">
 				<i class="fa fa-twitter"></i>
 			</a>
@@ -39,7 +40,15 @@
 			<a id="mail-icon" href="mailto:?subject={{restaurant.TwitterText|urlencode}}&body=http%3A//projects.sfchronicle.com/2016/top-100-restaurants/{{restaurant.slug}}/">
 				<i class="fa fa-envelope" aria-hidden="true"></i>
 			</a>
-		</div><br>
+		</div>
+		{% if restaurant.Name == 'Volta' %}
+		<p class="update">Update: As of September 25, Volta has closed.</p>
+
+		{% elif restaurant.Name == 'Ninebark' %}
+		<p class="update">Update: As of August, Ninebark has closed.</p>
+		{% else %}
+		{% endif %}
+		<br>
 
 	    <div class="fotorama" data-width="100%" data-arrows="always" data-nav="false">
 	    	<img src="{{restaurant.photo1}}" alt="" />
