@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}2017 Top Contenders{% endblock %}
+
+{% block hearst_title %}2017 Contenders{% endblock %}
+{% block channelpath %} :: Guide :: 2017 Contenders{% endblock %}
+
+{% block twitter_url %}{{ url_for('contenders') }}{% endblock %}
+{% block fb_url %}{{ url_for('contenders') }}{% endblock %}
+{% block fb_title %}Where to find great outdoor dining{% endblock %}
+{% block page_description %}Top 100 Restaurants: Michael Bauer shares his top picks for exceptional dining spots that let in the sun and sky.{% endblock %}
+{% block fb_description %}Top 100 Restaurants: Michael Bauer shares his top picks for exceptional dining spots that let in the sun and sky.{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_outdoors.jpg{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block header %}
+<div class="large-12 guides-image" style="background-image: url('http://ww3.hdnux.com/photos/44/52/22/10558365/3/1600x0.jpg'); background-position: center;">
+            
+    <a href="http://projects.sfchronicle.com/2016/top-100-restaurants/">        
+	    <div class="top100-logo">
+	        <img src="{{ url_for('static', filename='images/logo.jpg') }}" />
+	    </div>
+	</a>
+
+    <div class="cuisine-title">
+    	<h1>2017 Contenders</h1>
+    	<div id="social">
+			<a id="twitter-icon" title="Share on Twitter" onclick="tweet()">
+				<i class="fa fa-twitter"></i>
+			</a>
+			<a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Ftop-100-restaurants%2Fguide%2F2017-contenders%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+				<i class="fa fa-facebook"></i>
+			</a>
+			<a id="mail-icon" href="mailto:?subject=Top%20100%20Bay%20Area%20Restaurants%202016%20–%20A%20curated%20guide%20by%20the%20San%20Francisco%20Chronicle.&body=http://sfchronicle.com/Top100restaurants">
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+			</a>
+		</div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+	<div class="regions">
+		<ul class="regions-block">
+		  	<a href="{{ url_for('oneofakind_view') }}"><li class="oneofakind button">One of a Kind</li></a>
+		  	<a href="{{ url_for('pizza_view') }}"><li class="greatpizza button">Great Pizza</li></a>
+			<a href="{{ url_for('burger_view') }}"><li class="topburgers button">Top Burgers</li></a>
+			<a href="{{ url_for('late_view') }}"><li class="openlate button">Open Late</li></a>
+			<a href="{{ url_for('bars_view') }}"><li class="exceptionalbars button">Exceptional Bars</li></a>
+			<a href="{{ url_for('brunch_view') }}"><li class="bestofbrunch button">Best of Brunch</li></a>
+			<a href="{{ url_for('outdoor_view') }}"><li class="outdoor button">Outdoor</li></a>
+			<a href="{{ url_for('saturdaylunch_view') }}"><li class="saturdaylunch button">Saturday Lunch</li></a>
+			<a href="{{ url_for('classics_view') }}"><li class="top100classics button">Top 100 Classics</li></a>
+			<a href="{{ url_for('historic_view') }}"><li class="historic button">Historic</li></a>
+			<a href="{{ url_for('new_view') }}"><li class="new button">New</li></a>
+			<a href="{{ url_for('private_view') }}"><li class="privaterooms button">Private Rooms</li></a>
+			<a href="{{ url_for('fourstars_view') }}"><li class="fourstars button">Four Stars</li></a>
+		</ul>
+	</div>
+
+
+	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
+
+		{% for r in restaurants %}
+		
+			<div class="column guides">
+				<a href="{{ r.link }}" target="_blank"><img class="thumbnail" src="http://ww3.hdnux.com/photos/44/52/22/{{r.img}}/3/premium_landscape.jpg"></a>
+				<h5>{{r.restaurant}}</h5>
+			</div>
+
+		{% endfor %}
+
+
+	</div>
+
+	{%include 'components/_footer-wide.html'%}
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+  $(document).ready(function() {
+    App.init();
+  });
+
+</script>
+<script>
+function tweet() {
+    window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text='+ '{{"Where to find the best outdoor dining in the Bay Area."|urlencode}}'+'&hashtags='+'Top100restaurants', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    return false; 
+}
+</script>
+{% endblock %}
