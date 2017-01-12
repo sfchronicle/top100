@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}2017 Top Contenders{% endblock %}
+{% block title %}Top 100 Bay Area restaurants: 2017 Contenders{% endblock %}
 
-{% block hearst_title %}2017 Contenders{% endblock %}
+{% block hearst_title %}Top 100 Bay Area restaurants: 2017 Contenders{% endblock %}
 {% block channelpath %} :: Guide :: 2017 Contenders{% endblock %}
 
 {% block twitter_url %}{{ url_for('contenders') }}{% endblock %}
 {% block fb_url %}{{ url_for('contenders') }}{% endblock %}
-{% block fb_title %}Where to find great outdoor dining{% endblock %}
-{% block page_description %}Top 100 Restaurants: Michael Bauer shares his top picks for exceptional dining spots that let in the sun and sky.{% endblock %}
-{% block fb_description %}Top 100 Restaurants: Michael Bauer shares his top picks for exceptional dining spots that let in the sun and sky.{% endblock %}
-{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/top100guide_outdoors.jpg{% endblock %}
+{% block fb_title %}Top 100 Restaurants 2017 Contenders{% endblock %}
+{% block page_description %}See the top contenders for the 2017 edition of the Top 100 Bay Area Restaurants{% endblock %}
+{% block fb_description %}See the top contenders for the 2017 edition of the Top 100 Bay Area Restaurants{% endblock %}
+{% block fb_image %}http://projects.sfchronicle.com/2016/top-100-restaurants/social/2017contenders.jpg{% endblock %}
 
 {% block head %}
 
@@ -65,7 +65,7 @@
 
 
 	<div id="top100" class="row small-up-2 medium-up-3 large-up-4 restaurants">
-
+	<p style="max-width: 660px; margin: 0 auto 2em; text-align: center; padding-bottom: 1em; border-bottom: 1px solid #ccc;">To give readers a head start on the next edition of the Top 100 — and to point to some new or improved restaurants worth checking out — here are some restaurants in contention for the 2017 list. Of course, nothing is certain until the new list is published in May.</p>
 		{% for r in restaurants %}
 		
 			<div class="column guides">
@@ -92,7 +92,7 @@
 </script>
 <script>
 function tweet() {
-    window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text='+ '{{"Where to find the best outdoor dining in the Bay Area."|urlencode}}'+'&hashtags='+'Top100restaurants', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text='+ '{{"Top contenders for the 2017 edition of the Top 100 Bay Area Restaurants"|urlencode}}'+'&hashtags='+'Top100restaurants', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
     return false; 
 }
 </script>
